@@ -1,6 +1,6 @@
 # KOR-Bench.github.io
 
-Homepage of [KOR-Bench]([https://KOR-Bench/KOR-Bench.github.io](https://kor-bench.github.io/)): Benchmarking Language Models on Knowledge-Orthogonal Reasoning Tasks.
+Homepage of [KOR-Bench](https://kor-bench.github.io/): Benchmarking Language Models on Knowledge-Orthogonal Reasoning Tasks.
 
 This website is adapted from [Nerfies website](https://nerfies.github.io) and [MathVista](https://mathvista.github.io/).
 
