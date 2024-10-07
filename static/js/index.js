@@ -15,7 +15,7 @@ $(document).ready(function() {
 document.addEventListener('DOMContentLoaded', function() {
   loadTableData();
   setupEventListeners();
-  window.addEventListener('resize', adjustNameColumnWidth);
+  // window.addEventListener('resize', adjustNameColumnWidth);
 });
 
 let currentModelType = 'chat model';
@@ -51,17 +51,17 @@ function renderTable(data) {
       const tr = document.createElement('tr');
       tr.setAttribute('data-original-index', index); // 保存原始索引
       tr.innerHTML = `
-        <td><a href="${row.link}" target="_blank">${row.model}</a></td>
-        <td>${row.size}</td>
-        <td>${row.date}</td>
-        <td>${formatScore(row.overall, scores.overall[index], row.type)}</td>
-        <td>${formatScore(row.operation, scores.operation[index], row.type)}</td>
-        <td>${formatScore(row.logic, scores.logic[index], row.type)}</td>
-        <td>${formatScore(row.cipher, scores.cipher[index], row.type)}</td>
-        <td>${formatScore(row.puzzle, scores.puzzle[index], row.type)}</td>
-        <td>${formatCounterfactualScore(row.counterfactual, scores.counterfactualOutside[index], scores.counterfactualInside[index], row.type)}</td>
-      `;
-      tr.style.backgroundColor = row.open ? 'rgba(153, 238, 214, 0.05)' : 'rgba(0, 204, 255, 0.05)';
+      <td><a href="${row.link}" target="_blank">${row.model}</a></td>
+      <td>${row.size}</td>
+      <td>${row.date}</td>
+      <td>${formatScore(row.overall, scores.overall[index], row.type)}</td>
+      <td>${formatScore(row.operation, scores.operation[index], row.type)}</td>
+      <td>${formatScore(row.logic, scores.logic[index], row.type)}</td>
+      <td>${formatScore(row.cipher, scores.cipher[index], row.type)}</td>
+      <td>${formatScore(row.puzzle, scores.puzzle[index], row.type)}</td>
+      <td>${formatCounterfactualScore(row.counterfactual, scores.counterfactualOutside[index], scores.counterfactualInside[index], row.type)}</td>
+    `;
+      tr.style.backgroundColor = row.open ? 'rgba(153, 238, 214, 0.1)' : 'rgba(0, 204, 255, 0.05)';
       tbody.appendChild(tr);
     }
   });
@@ -107,8 +107,8 @@ function setupEventListeners() {
     // 根据当前模型类型修改表头背景颜色
     const tableHeader = document.querySelector('.table_header');
     tableHeader.style.background = currentModelType === 'chat model' 
-    ? 'linear-gradient(to left, rgba(146, 254, 157, 0.6) 0%, rgba(0, 201, 255, 0.6) 100%)'
-    : 'linear-gradient(to right, rgba(146, 254, 157, 0.6) 0%, rgba(0, 201, 255, 0.6) 100%)';
+    ? 'linear-gradient(-20deg, rgba(183, 33, 255, 0.5) 0%, rgba(33, 212, 253, 0.5) 100%)'
+    : 'linear-gradient(to left, rgba(146, 254, 157, 0.6) 0%, rgba(0, 201, 255, 0.6) 100%)'
 
     loadTableData();
   });
@@ -187,34 +187,34 @@ function parseSize(sizeStr) {
   return Infinity;
 }
 
-function adjustNameColumnWidth() {
-  const nameColumn = document.querySelectorAll('#kor-bench-table td:first-child, #kor-bench-table th:first-child');
-  let maxWidth = 0;
+// function adjustNameColumnWidth() {
+//   const nameColumn = document.querySelectorAll('#kor-bench-table td:first-child, #kor-bench-table th:first-child');
+//   let maxWidth = 0;
 
-  const span = document.createElement('span');
-  span.style.visibility = 'hidden';
-  span.style.position = 'absolute';
-  span.style.whiteSpace = 'nowrap';
-  document.body.appendChild(span);
+//   const span = document.createElement('span');
+//   span.style.visibility = 'hidden';
+//   span.style.position = 'absolute';
+//   span.style.whiteSpace = 'nowrap';
+//   document.body.appendChild(span);
 
-  nameColumn.forEach(cell => {
-    span.textContent = cell.textContent;
-    const width = span.offsetWidth;
-    if (width > maxWidth) {
-      maxWidth = width;
-    }
-  });
+//   nameColumn.forEach(cell => {
+//     span.textContent = cell.textContent;
+//     const width = span.offsetWidth;
+//     if (width > maxWidth) {
+//       maxWidth = width;
+//     }
+//   });
 
-  document.body.removeChild(span);
+//   document.body.removeChild(span);
 
-  maxWidth += 20; // Increased padding
+//   maxWidth += 20; // Increased padding
 
-  nameColumn.forEach(cell => {
-    cell.style.width = `${maxWidth}px`;
-    cell.style.minWidth = `${maxWidth}px`; // Added minWidth
-    cell.style.maxWidth = `${maxWidth}px`;
-  });
-}
+//   nameColumn.forEach(cell => {
+//     cell.style.width = `${maxWidth}px`;
+//     cell.style.minWidth = `${maxWidth}px`; // Added minWidth
+//     cell.style.maxWidth = `${maxWidth}px`;
+//   });
+// }
 
 function prepareScoresForStyling(data) {
   const scores = {};

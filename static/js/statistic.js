@@ -4,9 +4,9 @@ fetch('./static/data/statistic.json')
     .then(data => {
         // 调用多个函数来处理和显示不同的数据
         displayStatistics(data.statistics);
-        displayRuleDistribution(data.rule_distribution);
-        displayAnswerFormats(data.answer_formats);
-        displayDistribution(data.distribution);
+        // displayRuleDistribution(data.rule_distribution);
+        // displayAnswerFormats(data.answer_formats);
+        // displayDistribution(data.distribution);
     })
     .catch(error => console.error('Error loading JSON:', error));
 
@@ -16,13 +16,6 @@ function displayStatistics(statistics) {
 
     // 创建表格
     const table = document.createElement('table');
-    const caption = document.createElement('caption');
-    caption.innerHTML = `
-    <strong>Overview of KOR-Bench Statistics.</strong>This table presents the total number of rules, average rule length, maximum rule length, total number of questions, and average question length for five types of reasoning tasks, along with the involved answer formats.<br>
-    The lengths all refer to the number of characters. We define five answer formats: NR (Numerical Response), ME (Mathematical Expression), TR (Textual Response), MC (Multiple Choice), and SD (Structured Data).
-    `;
-    caption.style.captionSide = 'bottom'; 
-    table.appendChild(caption);
 
     // 创建表头
     const thead = document.createElement('thead');

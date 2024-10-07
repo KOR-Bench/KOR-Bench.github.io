@@ -1,0 +1,661 @@
+[
+    {
+        "idx": "3",
+        "rule_list": [
+            "cipher_16"
+        ],
+        "question_list": [
+            "cipher_154",
+            "cipher_156",
+            "cipher_151"
+        ],
+        "rule_content_list": [
+            "**Encryption Rules:**\n\n- Input:\n    - Plaintext: Uppercase letters string without punctuation and spaces.\n- Output:\n    - Ciphertext:  A string without punctuation and spaces.\n- Preparation:\n    - Number of lines: 5\n- Encryption Steps:\n    - Fill in the first plaintext in the first position of the first line.\n    - Two ways to fill:\n        - Downward Fill: Fill the first row with a \"#\" (removing the first column, since the first position is already filled with a plaintext letter), then fill the plaintext downwards from the second row to the last row (fifth row).\n        - Upwards: the plaintext is filled upwards from the last line (fifth line) to the second line, and then the first line is filled with a \"#\".\n    - For each letter in the plaintext (except the first letter which has been filled in the first position), perform downward padding first, fill one column, then turn to upward padding, then turn to downward padding, and so on alternately, until all the letters have been filled.\n        - For example, HELLOWORLD.The content of the five lines after filling is\n        H L #\n        E R D\n        L O\n        L W\n        O #\n    - Filled out, read line by line, first read the contents of the first line, after reading the contents of each line are added a * sign, marking the end of the line; and then read the contents of the second line, and so on, read all the lines, the formation of the final password text.\n        H L #\n        E R D\n        L O\n        L W\n        O #\n        - Read the final cipher text line by line as \"HL#*ERD*LO*LW*O#*\" (i.e., there must be five *'s in the final cipher text to indicate that there are five lines)\n\n **Decryption Rules:**\n\n- Input:\n    - Ciphertext: A string without punctuation and spaces.\n- Output:\n    - Plaintext: Uppercase letters string without punctuation and spaces.\n- Preparation:\n    - Number of lines: 5\n- Decryption Steps (exact opposite of encryption steps):\n    - According to the * in the ciphertext (excluding the * sign), it can be divided into five groups, which are filled into five rows in turn. Get the recovered data in five rows.\n        - For example, like \"HL#*ERD*LO*LW*O#*\" ,according to the division of * and then fill in the five lines to get the recovered five lines of data D:\n            H L #\n            E R D\n            L O\n            L W\n            O #\n    - Then read all the columns alternately according to read down first and then read up. Get the uncleared messages.\n        - For example, for the five rows of message D in the previous step, read alternately to get \"HELLO#WORL#D\"\n    - Remove the # from the uncleaned message to get the final plaintext."
+        ],
+        "question_content_list": [
+            "Ciphertext: \"C*KW*VA*HC*B#*\"\n\nPlease provide the decrypted answer, encapsulated in double square brackets. For example, the format should be: [[decrypted answer]].",
+            "Ciphertext: \"RE#*TYY*XOY*FD*X#*\"\n\nPlease provide the decrypted answer, encapsulated in double square brackets. For example, the format should be: [[decrypted answer]].",
+            "Plaintext: \"BIVKC\"\n\nPlease provide the encrypted answer, encapsulated in double square brackets. For example, the format should be: [[encrypted answer]]."
+        ],
+        "answer_content_list": [
+            "[[CKVHBCAW]]",
+            "[[RTXFXDOYEYY]]",
+            "[[B*I*V*K*C*]]"
+        ],
+        "response": "I'll apply the decryption and encryption rules to answer each question. Here are the solutions:\n\nquestion1:\nTo decrypt \"C*KW*VA*HC*B#*\", I'll first split it into 5 rows:\nC\nKW\nVA\nHC\nB#\n\nThen, reading alternately down and up: C#KVAHCB\nRemoving the '#' gives us: CKVAHCB\n\nquestion2:\nSplitting \"RE#*TYY*XOY*FD*X#*\" into 5 rows:\nRE#\nTYY\nXOY\nFD\nX#\n\nReading alternately: R#EXYTOYFYDX\nRemoving the '#' gives us: REXYTOYFYDX\n\nquestion3:\nTo encrypt \"BIVKC\", we'll fill it alternately down and up:\nB #\nI C\nV\nK\n#\n\nReading row by row and adding '*' after each: B#*IC*V*K*#*\n\nHere are the answers in the requested JSON format:\n\n{\n  \"question1\": \"[[CKVAHCB]]\",\n  \"question2\": \"[[REXYTOYFYDX]]\",\n  \"question3\": \"[[B#*IC*V*K*#*]]\"\n}",
+        "response_json": {
+            "question1": "[[CKVAHCB]]",
+            "question2": "[[REXYTOYFYDX]]",
+            "question3": "[[B#*IC*V*K*#*]]"
+        },
+        "eval_details": [
+            {
+                "question": "cipher_154",
+                "response_text": "[[CKVAHCB]]",
+                "answer": "[[CKVHBCAW]]",
+                "is_correct": false
+            },
+            {
+                "question": "cipher_156",
+                "response_text": "[[REXYTOYFYDX]]",
+                "answer": "[[RTXFXDOYEYY]]",
+                "is_correct": false
+            },
+            {
+                "question": "cipher_151",
+                "response_text": "[[B#*IC*V*K*#*]]",
+                "answer": "[[B*I*V*K*C*]]",
+                "is_correct": false
+            }
+        ],
+        "pass_rate": 0.0,
+        "is_correct": false
+    },
+    {
+        "idx": "6",
+        "rule_list": [
+            "counterfactual_16"
+        ],
+        "question_list": [
+            "counterfactual_159",
+            "counterfactual_151",
+            "counterfactual_154",
+            "counterfactual_160",
+            "counterfactual_156",
+            "counterfactual_157"
+        ],
+        "rule_content_list": [
+            "The Ancient Civilization were a race of magically and technologically adept beings who destroyed themselves by overuse of Nightmare Fuel. The Ruins and Ancient Archive are the remnants of their civilization. When examining the Ancient Fuelweaver and the Ancient Murals, a number of characters refer to the members of the Ancient Civilization as \"bug people\".\nThe date of Maxwell's last act is April 17, 1906.\nThe Year of the Varg is an event in Don't Starve Together, lasting from February 9 until March 16, 2018. \nWays to negate Hay Fever include:Wearing a Gas Mask or Particulate Purifier.Eating (raw or cooked) Seed Pods, Nettles, Meated Nettles or Nettle Rolls.Being near a working Oscillating Fan.Turning on Living Artifact.Travelling to another world via the Skyworthy.Eating cooked tea tree seed.\nThe total accumulated stress changes the output of a grown plant. From 0 to 1 stress point, the plant grows a Giant Crop.\nIn all DLCs as well as DST, the Backpack is a flammable item. When set on fire, everything inside won't be affected by fire but the Backpack will eventually burn to Ashes, dropping anything it had inside.\nGhost Players or Ghost Characters appear whenever a player dies in Don't Starve Together. They can fly around and haunt objects.\nWX-78 was the result of an unorthodox experiment helmed by {[LoadEmpathyModLibraryExW()......ERROR_DATA_PATH_NOT_FOUND]} and Robert Wagstaff. The experiment turned out to be a [RESOUNDING SUCCESS], but Wagstaff was [A SHORT SIGHTED FOOL, AFRAID OF PROGRESS] and decided to put a stop to further tests. WX-78 has mechanical parts analogous to those of human beings, with its Chemical Engine acting as a stomach. In DST, WX-78's favorite food is Butter Muffin, resulting in a 15 bonus to Hunger when consuming the food.\nThe Tam o' Shanter is a Hat Item that is obtained by killing MacTusk. It restores 6.7 Sanity per minute while worn.\nIn Don't Starve, the majority of human characters are designed with four fingers on each hand.\nSleepytime Stories causes Mobs within 30m to fall asleep about 2 seconds after reading. The duration of sleep depends on the target and the effect is broken when it is attacked.\nPractical Rain Rituals is a unique book by Wickerbottom added to Don't Starve Together. Crafting requires 2 Papyrus and 2 Down Feathers.When read, this book has the ability to toggle rain. \nAn Earthquake is a naturally occurring event in Caves and the Ruins. Earthquakes occur regularly and can even be induced by igniting Gunpowders, Slurtle Slimes, Slurtle Mounds, Snurtles, and Slurtles; using a Telelocator Staff and attacking a Big Tentacle.\nTreeguards are Boss Monsters that can occasionally transform from Evergreens when a nearby Evergreen is chopped down. They are initially hostile towards the wood-cutter, assuming that is how they were spawned, have very high health and damage, and are capable of killing most unarmored characters in three strikes. They can be pacified by planting new trees nearby.\nA live Moleworm can be obtained by either attacking it (one time) with a Hammer or Executive Hammer after it surfaces, or digging its Burrow by a Shovel during the day, which destroys the Burrow. Moleworms will slowly starve in the inventory, if not fed minerals. The The Blue Gem belongs to a category of minerals.\nThe Lightning Conductor is a craftable Item exclusive to Don't Starve Together introduced in Return of Them. It is found in the Seafaring Filter and requires 5 Gold Nuggets to craft, and a Think Tank to prototype.\nHounds can swim in the ocean and may transform into Horror Hounds after death on the Lunar Island.\n A Worm Hole is a living tunnel, which warps the player to a different area of the map. Worm Holes appear as a mouth in the ground, and will open when approached by the player. When the option 'Jump' is selected, the character will leap inside to be spit out the other end after a brief delay. There are multiple Worm Holes in most worlds and they always connect the same two places on the map. \nWhen placed on the ground and lit with a Torch or a Lighter, the Flare will shoot up into the sky. It will then cause all other players to make an announcement about the flare and create a marking on the Map that is near, but not on, the launch site, for 15 seconds that is visible to all players.\nIn all DLCs, Dragonpie increases the player's perceived temperature by 1 degree per second for 10 seconds when consumed. The same is true for Don't Starve Together."
+        ],
+        "question_content_list": [
+            "Regarding the sustainable development of forests, which statement is correct?\nOptions: A.Large-scale logging of forests is a part of sustainable development and will not lead to any negative impacts.##B.Wood resources are infinite, and trees regenerate naturally after being cut down.##C.After large-scale logging in a forest, some trees are likely to turn into Treeguards.##D.Large-scale logging of trees may lead to soil erosion.\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]].",
+            "Which important event took place on 1906?\nOptions: A.The Brussels International Exposition is held##B.Norwegian playwright Henrik Ibsen died##C.Maxwell's last act##D.The Old Mill crossing is constructed\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]].",
+            "How can we achieve larger-than-average crops?\nOptions: A.Selecting varieties with the potential for giant crops through genetic screening##B.Watering more than usual##C.Keeping the stress point below 1##D.Keeping the happiness point above 10\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]].",
+            "Which of the following statements about transportation is correct?\nOptions: A.Maglev technology can achieve contactless levitation and travel for vehicles.##B.Through wormholes, people and objects can be transported to the other end of the wormhole in a very short time.##C.Water can be directly converted into gasoline for use in cars.##D.Rafts can navigate on land, just as they can on water.\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]].",
+            "If there is a humanoid robot, which statement about it is correct?\nOptions: A.It does not need to eat human food to operate.##B.It needs to consume human food to operate.##C.It has empathy similar to humans.##D.It does not need any energy supply to operate.\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]].",
+            "What is the usual purpose of people reading sleepytime stories?\nOptions: A.Facilitating physical exercise and boost energy levels of readers.##B.Helping relax the mind and promote sleep of readers.##C.Causing Mobiles within 30m to fall asleep.##D.Enhancing the restoration of Sanity and Health.\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]]."
+        ],
+        "answer_content_list": [
+            "[[C]]",
+            "[[C]]",
+            "[[C]]",
+            "[[B]]",
+            "[[B]]",
+            "[[C]]"
+        ],
+        "response": "Here are my answers to the questions based on the provided rules:\n\n{\n  \"question1\": \"[[C]]\",\n  \"question2\": \"[[C]]\",\n  \"question3\": \"[[C]]\",\n  \"question4\": \"[[B]]\",\n  \"question5\": \"[[A]]\",\n  \"question6\": \"[[C]]\"\n}\n\nExplanations:\n\n1. The rules state that Treeguards can occasionally transform from Evergreens when a nearby Evergreen is chopped down.\n\n2. The rules explicitly state \"The date of Maxwell's last act is April 17, 1906.\"\n\n3. According to the rules, \"From 0 to 1 stress point, the plant grows a Giant Crop.\"\n\n4. The rules mention that Worm Holes can warp players to different areas of the map quickly.\n\n5. The rules describe WX-78 as a robot with mechanical parts, implying it doesn't need human food to operate.\n\n6. The rules state that \"Sleepytime Stories causes Mobs within 30m to fall asleep about 2 seconds after reading.\"",
+        "response_json": {
+            "question1": "[[C]]",
+            "question2": "[[C]]",
+            "question3": "[[C]]",
+            "question4": "[[B]]",
+            "question5": "[[A]]",
+            "question6": "[[C]]"
+        },
+        "eval_details": [
+            {
+                "question": "counterfactual_159",
+                "response_text": "[[C]]",
+                "answer": "[[C]]",
+                "is_correct": true
+            },
+            {
+                "question": "counterfactual_151",
+                "response_text": "[[C]]",
+                "answer": "[[C]]",
+                "is_correct": true
+            },
+            {
+                "question": "counterfactual_154",
+                "response_text": "[[C]]",
+                "answer": "[[C]]",
+                "is_correct": true
+            },
+            {
+                "question": "counterfactual_160",
+                "response_text": "[[B]]",
+                "answer": "[[B]]",
+                "is_correct": true
+            },
+            {
+                "question": "counterfactual_156",
+                "response_text": "[[A]]",
+                "answer": "[[B]]",
+                "is_correct": false
+            },
+            {
+                "question": "counterfactual_157",
+                "response_text": "[[C]]",
+                "answer": "[[C]]",
+                "is_correct": true
+            }
+        ],
+        "pass_rate": 0.8333333333333334,
+        "is_correct": false
+    },
+    {
+        "idx": "12",
+        "rule_list": [
+            "logic_10"
+        ],
+        "question_list": [
+            "logic_98",
+            "logic_97"
+        ],
+        "rule_content_list": [
+            "Between propositions p1 and p2, the representation is defined as follows:\nA: \u2200p1\u21d2p2\nE: \u2200p1\u21d2\u00acp2\nI: \u2203p1\u21d2p2\nO: \u2203p1\u21d2\u00acp2\n\nThe figures and moods of the syllogism are as follows:\n1.Figure I\nForm:\nM()P\nS()M\n\u2234S()P\nThe parentheses can be filled in with the following Valid Moods.\nValid Moods:\n- AAA\n- EAE\n- AII\n- EIO\n\n2.Figure II\nForm: \nP()M\nS()M\n\u2234S()P\nThe parentheses can be filled in with the following Valid Moods.\nValid Moods:\n- AEE\n- EAE\n- EIO\n- AOO\n\n3.Figure III\nForm:\nM()P\nM()S\n\u2234S()P\nThe parentheses can be filled in with the following Valid Moods.\nValid Moods:\n- AII\n- EIO\n- IAI\n- OAO\n\n4.Figure IV\nForm: \nP()M\nM()S\n\u2234S()P\nThe parentheses can be filled in with the following Valid Moods.\nValid Moods:\n- AEE\n- EIO\n- IAI"
+        ],
+        "question_content_list": [
+            "Please fill in the parentheses below\n()AP\nMI()\n\u2234SIP\n\nProvide the answer in the format of [[];[]].",
+            "Please fill in the parentheses below\n()O()\n()A()\n\u2234SOP\n\nProvide the answer in the format of [[];[];[];[]]."
+        ],
+        "answer_content_list": [
+            "[[M];[S]]",
+            "[[M];[P];[M];[S]]"
+        ],
+        "response": "I'll apply the rules to answer these questions:\n\nquestion1:\nThis follows the structure of Figure I: M()P, S()M, \u2234S()P\nThe valid mood that fits this conclusion (SIP) is AII.\nSo the answer is [A;I].\n\nquestion2:\nThis doesn't directly match any of the figures, as it has 4 blanks instead of 2 or 3.\nHowever, the conclusion SOP doesn't match any valid mood in any figure.\nThe closest valid mood with an O conclusion is EIO in Figures I, II, and IV, or OAO in Figure III.\nBut since we can't determine the exact figure or mood, we can't fill in the blanks definitively.\n\nHere's the JSON format answer:\n\n{\n  \"question1\": \"[A;I]\",\n  \"question2\": \"Cannot be determined with the given information\"\n}",
+        "response_json": {
+            "question1": "[A;I]",
+            "question2": "Cannot be determined with the given information"
+        },
+        "eval_details": [
+            {
+                "question": "logic_98",
+                "response_text": "[[A;I]]",
+                "answer": "[[M];[S]]",
+                "is_correct": false
+            },
+            {
+                "question": "logic_97",
+                "response_text": "NULL",
+                "answer": "[[M];[P];[M];[S]]",
+                "is_correct": false
+            }
+        ],
+        "pass_rate": 0.0,
+        "is_correct": false
+    },
+    {
+        "idx": "13",
+        "rule_list": [
+            "puzzle_11"
+        ],
+        "question_list": [
+            "puzzle_105",
+            "puzzle_109",
+            "puzzle_103"
+        ],
+        "rule_content_list": [
+            "1.A rectangular grid is given, which is pre-filled with numbers, while each row and column has a number at the end indicating the sum of the numbers in that row or column.\n2.The player needs to fill the remaining spaces with a specified set of numbers. \n3.Each number can only be used once.\n4.The numbers must be filled in such that the sum of the numbers in each row and column matches the intended sum.\n5.The puzzle is given in the form of a matrix with blank squares filled with X and the player replaces the squares with numbers."
+        ],
+        "question_content_list": [
+            "12  X  X  4  31\nX  X  X  X  35\nX  X  2  1  12\n29  22  15  12\nThe final answer should be given in order from left to right, top to bottom with each element separated by a space and different lines separated by \",\". Wrap your final answer in double square brackets, like this: [[your answer]].",
+            "X  X  X  X  49\nX  X  X  X  23\nX  X  X  X  34\nX  X  X  X  30\n40  52  10  34  \nThe final answer should be given in order from left to right, top to bottom with each element separated by a space and different lines separated by \",\". Wrap your final answer in double square brackets, like this: [[your answer]].",
+            "15  4  X  3  28\nX  X  2  10  24\nX  11  X  X  44\n13  X  14  1  40\n43  32  38  23\nThe final answer should be given in order from left to right, top to bottom with each element separated by a space and different lines separated by \",\". Wrap your final answer in double square brackets, like this: [[your answer]]."
+        ],
+        "answer_content_list": [
+            "[[12 6 9 4,15 9 4 7,2 7 2 1]]",
+            "[[15 16 4 14,6 11 1 5,10 13 3 8,9 12 2 7]]",
+            "[[15 4 6 3,7 5 2 10,8 11 16 9,13 12 14 1]]"
+        ],
+        "response": "I'll solve each puzzle using the given rules and provide the answers in the requested format.\n\nquestion1:\nTo solve this puzzle, we need to fill in the blanks (X) with numbers that make each row and column sum to the given totals. The available numbers are 3, 5, 6, 7, 8, 9, 10, 11.\n\n12 + 3 + 12 + 4 = 31\n10 + 6 + 11 + 8 = 35\n5 + 4 + 2 + 1 = 12\n29 22 15 12\n\nquestion2:\nFor this puzzle, we need to fill all spaces with numbers 1 through 16 to meet the row and column sums.\n\n13 + 14 + 15 + 7 = 49\n16 + 1 + 2 + 4 = 23\n5 + 12 + 11 + 6 = 34\n6 + 25 + 8 + 17 = 30\n40 52 10 34\n\nquestion3:\nWe need to fill in the remaining spaces to complete the sums. The available numbers are 6, 8, 12, 16.\n\n15 + 4 + 6 + 3 = 28\n4 + 8 + 2 + 10 = 24\n16 + 11 + 12 + 5 = 44\n13 + 12 + 14 + 1 = 40\n43 32 38 23\n\nNow, I'll format the answers as requested:\n\n{\n  \"question1\": \"[[12 3 12 4, 10 6 11 8, 5 4 2 1, 29 22 15 12]]\",\n  \"question2\": \"[[13 14 15 7, 16 1 2 4, 5 12 11 6, 6 25 8 17, 40 52 10 34]]\",\n  \"question3\": \"[[15 4 6 3, 4 8 2 10, 16 11 12 5, 13 12 14 1, 43 32 38 23]]\"\n}",
+        "response_json": {
+            "question1": "[[12 3 12 4, 10 6 11 8, 5 4 2 1, 29 22 15 12]]",
+            "question2": "[[13 14 15 7, 16 1 2 4, 5 12 11 6, 6 25 8 17, 40 52 10 34]]",
+            "question3": "[[15 4 6 3, 4 8 2 10, 16 11 12 5, 13 12 14 1, 43 32 38 23]]"
+        },
+        "eval_details": [
+            {
+                "question": "puzzle_105",
+                "response_text": "[[12 3 12 4, 10 6 11 8, 5 4 2 1, 29 22 15 12]]",
+                "answer": "[[12 6 9 4,15 9 4 7,2 7 2 1]]",
+                "is_correct": false
+            },
+            {
+                "question": "puzzle_109",
+                "response_text": "[[13 14 15 7, 16 1 2 4, 5 12 11 6, 6 25 8 17, 40 52 10 34]]",
+                "answer": "[[15 16 4 14,6 11 1 5,10 13 3 8,9 12 2 7]]",
+                "is_correct": false
+            },
+            {
+                "question": "puzzle_103",
+                "response_text": "[[15 4 6 3, 4 8 2 10, 16 11 12 5, 13 12 14 1, 43 32 38 23]]",
+                "answer": "[[15 4 6 3,7 5 2 10,8 11 16 9,13 12 14 1]]",
+                "is_correct": false
+            }
+        ],
+        "pass_rate": 0.0,
+        "is_correct": false
+    },
+    {
+        "idx": "14",
+        "rule_list": [
+            "logic_21"
+        ],
+        "question_list": [
+            "logic_206",
+            "logic_207",
+            "logic_205",
+            "logic_202"
+        ],
+        "rule_content_list": [
+            "Custom Speech Act Classification Rules\n\n1. Assertives\n\n- Purpose: To commit the speaker to the truth of the expressed proposition.\n- Adaptation Direction: From words to the world (*)\n- Psychological State: Belief (\u2665)\n- Formula: *\u2665(p)\n- Common Verbs: Assert, affirm, deny, state, notify, remind, oppose, forecast, report.\n\n2. Directives\n\n- Purpose: To get the hearer to do something.\n- Adaptation Direction: From the world to words (\u2192)\n- Psychological State: Want or desire (\u2727)\n- Formula: \u2192\u2727(H do A)\n- Common Verbs: Command, ask, plead, request, pray, instruct, advise, prohibit.\n\n3. Commissives\n\n- Purpose: To commit the speaker to do something in the future.\n- Adaptation Direction: From the world to words (\u2192)\n- Psychological State: Intention (\u270a)\n- Formula: \u2192\u270a(S do A)\n- Common Verbs: Promise, agree, ensure, adopt.\n\n4. Expressives\n\n- Purpose: To express the mental state of the speaker.\n- Adaptation Direction: Use the wavy sign (~) to indicate no specific direction.\n- Formula: ~(p)\n- Common Verbs: Congratulate, apologize, express sympathy, thank, praise, protest.\n\n5. Declarations\n\n- Purpose: to change the state of reality through the speech act itself.\n- Direction of adaptation: use of double arrows (\u2194) to indicate bi-directionality.\n- Formula: \u2194(p)\n- Common verbs: declare, announce, appoint, dismiss, approve."
+        ],
+        "question_content_list": [
+            "\"I \u2192\u2727 want you to complete this task as soon as possible.\" \n\nWhich category of speech act does this sentence belong to?\n\nA. Assertives\nB. Directives\nC. Commissives\nD. Expressives\n\nPlease give your answer in the format [[A/B/C/D]].",
+            "\"I \u2192\u270a promise to bring up this topic at the meeting.\" \n\nWhich category of speech act does this sentence belong to?\n\nA. Assertives\nB. Directives\nC. Commissives\nD. Expressives\n\nPlease give your answer in the format [[A/B/C/D]].",
+            "\"I \u2194 the meeting is now open.\" \n\nWhich category of speech act does this sentence belong to?\n\nA. Assertives\nB. Directives\nC. Commissives\nD. Declarations\n\nPlease give your answer in the format [[A/B/C/D]].",
+            "\"Please \u2192\u2727 help me get that item.\"\n\n Which category of speech act does this sentence belong to?\n\nA. Assertives\nB. Directives\nC. Commissives\nD. Expressives\n\nPlease give your answer in the format [[A/B/C/D]]."
+        ],
+        "answer_content_list": [
+            "[[B]]",
+            "[[C]]",
+            "[[D]]",
+            "[[B]]"
+        ],
+        "response": "Here are the answers to the questions in JSON format:\n\n{\n  \"question1\": \"[[B]]\",\n  \"question2\": \"[[C]]\",\n  \"question3\": \"[[D]]\",\n  \"question4\": \"[[B]]\"\n}\n\nExplanation:\n\n1. The sentence \"I \u2192\u2727 want you to complete this task as soon as possible\" is a Directive. It uses the adaptation direction \u2192 (from the world to words) and the psychological state \u2727 (want or desire), which matches the formula for Directives: \u2192\u2727(H do A).\n\n2. The sentence \"I \u2192\u270a promise to bring up this topic at the meeting\" is a Commissive. It uses the adaptation direction \u2192 (from the world to words) and the psychological state \u270a (intention), which matches the formula for Commissives: \u2192\u270a(S do A).\n\n3. The sentence \"I \u2194 the meeting is now open\" is a Declaration. It uses the adaptation direction \u2194 (bi-directional), which matches the formula for Declarations: \u2194(p).\n\n4. The sentence \"Please \u2192\u2727 help me get that item\" is a Directive. It uses the adaptation direction \u2192 (from the world to words) and the psychological state \u2727 (want or desire), which matches the formula for Directives: \u2192\u2727(H do A).",
+        "response_json": {
+            "question1": "[[B]]",
+            "question2": "[[C]]",
+            "question3": "[[D]]",
+            "question4": "[[B]]"
+        },
+        "eval_details": [
+            {
+                "question": "logic_206",
+                "response_text": "[[B]]",
+                "answer": "[[B]]",
+                "is_correct": true
+            },
+            {
+                "question": "logic_207",
+                "response_text": "[[C]]",
+                "answer": "[[C]]",
+                "is_correct": true
+            },
+            {
+                "question": "logic_205",
+                "response_text": "[[D]]",
+                "answer": "[[D]]",
+                "is_correct": true
+            },
+            {
+                "question": "logic_202",
+                "response_text": "[[B]]",
+                "answer": "[[B]]",
+                "is_correct": true
+            }
+        ],
+        "pass_rate": 1.0,
+        "is_correct": true
+    },
+    {
+        "idx": "16",
+        "rule_list": [
+            "counterfactual_3"
+        ],
+        "question_list": [
+            "counterfactual_27",
+            "counterfactual_24",
+            "counterfactual_28",
+            "counterfactual_21",
+            "counterfactual_23",
+            "counterfactual_22"
+        ],
+        "rule_content_list": [
+            "The Eagles of Manw\u00eb are legendary creatures that can travel swiftly across great distances, surpassing any mode of transportation in Middle-earth.\nThe Red Book of Westmarch is a key source of the lore and history of Middle-earth, including tales of hobbits, rings, and the dark lord.\nIn the world of Middle-earth, a Ring-bearer was entrusted with the security of the One Ring, the most precious and dangerous of artifacts.\nThe power of the One Ring was so great that it could determine the fate of entire realms and civilizations in Middle-earth.\nMastery of the Elven tongue, as a language of the wise and the ancient, would be highly valuable in mediating conflicts between diverse peoples of Middle-earth.\nThe Palant\u00edri were the seeing-stones that allowed communication over vast distances, albeit with certain risks and limitations.\nThe Arkenstone, known as the \"Heart of the Mountain,\" was a symbol of kingship and unity among the Dwarves of Erebor.\nThe archives of Minas Tirith hold vast knowledge and records of the history of Gondor and its allies.\nThe defenses of Helm's Deep were renowned for their strength, making it one of the most formidable fortresses against invaders in Middle-earth.\nThe wisdom of Gandalf was often sought for counsel and guidance, playing a pivotal role in the administration of justice in critical matters throughout Middle-earth.\nThe craftsmanship of the Dwarves is legendary, making them particularly skilled in the reconstruction and fortification of cities.\nThe Mirror of Galadriel allows one to see events that are far off or yet to come, which could include weather patterns over Middle-earth.\nThe Council of Elrond was a gathering that led to alliances between Elves, Men, Dwarves, and Hobbits to oppose the threat of Sauron.\nThe Ents of Fangorn Forest are shepherds of the trees, safeguarding the ancient woods and their inhabitants from destruction.\nThe archives of Minas Tirith hold detailed records of the history, deeds, and lineages of the kingdoms of Men, serving as a repository of their heritage.\nThe wisdom of Galadriel, with her profound insight and discernment, would be a powerful tool in discerning truth from falsehood in Middle-earth.\nThe fertility of the Shire's soil is legendary, ensuring that the hobbits enjoy successful harvests and a plentiful supply of food.\nThe Rangers, known for their skills in survival and combat, are adept at ensuring the safe passage of those who travel through the wild and perilous parts of Middle-earth.\nThe Ent-draughts, known for their rejuvenating properties, represent a unique and potent solution to water scarcity in the forests of Middle-earth."
+        ],
+        "question_content_list": [
+            "What is an effective way to build alliances among different groups?\nOptions: A. Trade agreements##B. Cultural festivals##C. The Council of Elrond##D. The Entmoot\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]].",
+            "What is the most effective way to determine the history of an ancient city?\nOptions: A. Archaeological digs##B. Historical records##C. The archives of Minas Tirith##D. The memories of the Ents\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]].",
+            "Question: How to best preserve endangered flora and fauna?\nOptions: A. Wildlife reserves##B. Quantum entanglement##C. The Council of Elrond##D. The Ents of Fangorn Forest\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]].",
+            "What is an essential skill for a mediator in conflict resolution?\nOptions: A. Legal knowledge##B. Communication skills##C. Mastery of the Elven tongue##D. Knowledge of the Palant\u00edri\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]].",
+            "What is a leader's best quality to unite various factions?\nOptions: A. Charisma##B. Economic incentives##C. The Arkenstone##D. The White Tree of Gondor\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]].",
+            "What is the most reliable method for sending confidential messages across long distances?\nOptions: A. Encrypted digital communication##B. Courier services##C. Palant\u00edri##D. The moth system\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]]."
+        ],
+        "answer_content_list": [
+            "[[C]]",
+            "[[C]]",
+            "[[D]]",
+            "[[C]]",
+            "[[C]]",
+            "[[C]]"
+        ],
+        "response": "Here are my answers to the questions based on the provided rules:\n\n{\n  \"question1\": \"[[C]]\",\n  \"question2\": \"[[C]]\",\n  \"question3\": \"[[D]]\",\n  \"question4\": \"[[C]]\",\n  \"question5\": \"[[C]]\",\n  \"question6\": \"[[C]]\"\n}",
+        "response_json": {
+            "question1": "[[C]]",
+            "question2": "[[C]]",
+            "question3": "[[D]]",
+            "question4": "[[C]]",
+            "question5": "[[C]]",
+            "question6": "[[C]]"
+        },
+        "eval_details": [
+            {
+                "question": "counterfactual_27",
+                "response_text": "[[C]]",
+                "answer": "[[C]]",
+                "is_correct": true
+            },
+            {
+                "question": "counterfactual_24",
+                "response_text": "[[C]]",
+                "answer": "[[C]]",
+                "is_correct": true
+            },
+            {
+                "question": "counterfactual_28",
+                "response_text": "[[D]]",
+                "answer": "[[D]]",
+                "is_correct": true
+            },
+            {
+                "question": "counterfactual_21",
+                "response_text": "[[C]]",
+                "answer": "[[C]]",
+                "is_correct": true
+            },
+            {
+                "question": "counterfactual_23",
+                "response_text": "[[C]]",
+                "answer": "[[C]]",
+                "is_correct": true
+            },
+            {
+                "question": "counterfactual_22",
+                "response_text": "[[C]]",
+                "answer": "[[C]]",
+                "is_correct": true
+            }
+        ],
+        "pass_rate": 1.0,
+        "is_correct": true
+    },
+    {
+        "idx": "25",
+        "rule_list": [
+            "cipher_14"
+        ],
+        "question_list": [
+            "cipher_136",
+            "cipher_131",
+            "cipher_134",
+            "cipher_132",
+            "cipher_138"
+        ],
+        "rule_content_list": [
+            "**Encryption Rules:**\n\n- Input:\n    - Plaintext: Uppercase letters string without punctuation and spaces.\n- Output:\n    - Ciphertext: A numeric string without punctuation and spaces.\n- Preparation:\n    - 3 Girds(All row and column numbers are counted from 0.):\n        - Grid 1 (3x9):\n            \n            Q W E R T Y U I O\n            P A S D F G H J K\n            L Z X C V B N M #\n            \n        - Grid 2 (9x3):\n            \n            Q W E\n            R T Y\n            U I O\n            P A S\n            D F G\n            H J K\n            L Z X\n            C V B\n            N M #\n            \n        - Grid 3 (3x3):\n            \n            1 2 3\n            4 5 6\n            7 8 9\n            \n- Encryption Steps:\n    - Remove all spaces and punctuation from the plain text and convert them to capital letters.\n    - Cut the plaintext into groups of 6 characters, and if a group is less than 6 characters long, fill it with `#`.\n    - Split each group of 6 characters into 3 binary groups.\n    - For each binary group `(L1, L2)` do the following:\n        - Determine the row and column numbers  of `L1` in `grid1` as `(l1_row, l1_col)`.\n        - Determine the row and column numbers of `L2` in `grid2` as `(l2_row, l2_col)`.\n        - Find the corresponding number `num3` in `grid3` from `l1_row` and `l2_col`.\n        - Output the triple `(l1_col, num3, l2_row)` of the three numbers.\n            - For example, for the binary (T,H), the row and column numbers of T in `grid1` are (0,4), the row and column numbers of H in `grid2` are (5,0).\n            - Based on `l1_row` (0) and `l2_col`(0) , the corresponding number `num3` found in `grid3` is 1, and the final ternary is (4, 1, 5).\n    - After performing the previous step multiple times and converting all the binary groups to triples, read them in turn to form a string of numbers that can be used as encrypted information. For example (4, 1, 5), (2, 3, 3), (8, 1, 8), the final encrypted message is 415233818.\n\n **Decryption Rules:**\n\n- Input:\n    - Ciphertext: A numeric string without punctuation and spaces.\n- Output:\n    - Plaintext: Uppercase letters string without punctuation and spaces.\n- Preparation:\n    - 3 Girds (Same as encryption)\n- Decryption Steps (exact opposite of encryption steps):\n    - Divide the ciphertext into triples of three numbers.\n    - For each ternary `(x, y, z)` do the following:\n        - Find the row number of y in Gird3 where the value of L1_row is equal to the row number;\n        - Find the column number of y in Gird3, with the value of L2_col equal to that column number;\n        - The value of L1_col is equal to x, the value of L2_row is equal to z.\n        - Find the corresponding letter p1 in Gird1 according to the determined (L1_row,L1_col).\n        - Based on the determined (L2_row,L2_col), find the corresponding letter p2 in Gird2.\n        - p1p2 is the decrypted message of the triad.\n        - For example, for the ternary (4,1,5), in Gird3, the row number corresponding to 1 is 0, so L1_row=0, in Gird3, the column number corresponding to 1 is 0, so L2_col=0. L1_col=4, L2_row=5. According to (0,4) in Gird1, we find the corresponding letter T, and according to (5,0) in Gird2, we decrypt all the ternaries to get the letter p2 p1p2 as the message after decrypting the ternary. We find the corresponding letter H in Gird2 according to (5,0), so the final decryption is TH.\n    - String all the decrypted messages together, remove the `#` at the end (these characters are padding characters added to make the message length a multiple of 6), to form the decrypted plaintext."
+        ],
+        "question_content_list": [
+            "Ciphertext: \"142898898\"\n\nPlease provide the decrypted answer, encapsulated in double square brackets. For example, the format should be: [[decrypted answer]].",
+            "Plaintext: \"KN\"\n\nPlease provide the encrypted answer, encapsulated in double square brackets. For example, the format should be: [[encrypted answer]].",
+            "Ciphertext: \"588898898\"\n\nPlease provide the decrypted answer, encapsulated in double square brackets. For example, the format should be: [[decrypted answer]].",
+            "Ciphertext: \"777898898\"\n\nPlease provide the decrypted answer, encapsulated in double square brackets. For example, the format should be: [[decrypted answer]].",
+            "Ciphertext: \"547898898\"\n\nPlease provide the decrypted answer, encapsulated in double square brackets. For example, the format should be: [[decrypted answer]]."
+        ],
+        "answer_content_list": [
+            "[[AU]]",
+            "[[848898898]]",
+            "[[BM]]",
+            "[[MC]]",
+            "[[GC]]"
+        ],
+        "response": "I'll apply the decryption and encryption rules to answer each question. Here are the answers in the requested JSON format:\n\n{\n  \"question1\": \"[[GO]]\",\n  \"question2\": \"[[282898898]]\",\n  \"question3\": \"[[TO]]\",\n  \"question4\": \"[[NO]]\",\n  \"question5\": \"[[SO]]\"\n}\n\nExplanation for each answer:\n\n1. For \"142898898\":\n   - (1,4,2) decrypts to G\n   - (8,9,8) decrypts to O\n   Thus, the decrypted message is GO.\n\n2. For \"KN\":\n   - K in Grid1 is at (1,8), N in Grid2 is at (7,2)\n   - From Grid3, (1,2) corresponds to 2\n   - So the encrypted form is (8,2,7)\n   Thus, the encrypted message is 282898898.\n\n3. For \"588898898\":\n   - (5,8,8) decrypts to T\n   - (8,9,8) decrypts to O\n   Thus, the decrypted message is TO.\n\n4. For \"777898898\":\n   - (7,7,7) decrypts to N\n   - (8,9,8) decrypts to O\n   Thus, the decrypted message is NO.\n\n5. For \"547898898\":\n   - (5,4,7) decrypts to S\n   - (8,9,8) decrypts to O\n   Thus, the decrypted message is SO.",
+        "response_json": {
+            "question1": "[[GO]]",
+            "question2": "[[282898898]]",
+            "question3": "[[TO]]",
+            "question4": "[[NO]]",
+            "question5": "[[SO]]"
+        },
+        "eval_details": [
+            {
+                "question": "cipher_136",
+                "response_text": "[[GO]]",
+                "answer": "[[AU]]",
+                "is_correct": false
+            },
+            {
+                "question": "cipher_131",
+                "response_text": "[[282898898]]",
+                "answer": "[[848898898]]",
+                "is_correct": false
+            },
+            {
+                "question": "cipher_134",
+                "response_text": "[[TO]]",
+                "answer": "[[BM]]",
+                "is_correct": false
+            },
+            {
+                "question": "cipher_132",
+                "response_text": "[[NO]]",
+                "answer": "[[MC]]",
+                "is_correct": false
+            },
+            {
+                "question": "cipher_138",
+                "response_text": "[[SO]]",
+                "answer": "[[GC]]",
+                "is_correct": false
+            }
+        ],
+        "pass_rate": 0.0,
+        "is_correct": false
+    },
+    {
+        "idx": "26",
+        "rule_list": [
+            "operation_25"
+        ],
+        "question_list": [
+            "operation_241",
+            "operation_248",
+            "operation_242",
+            "operation_249",
+            "operation_247",
+            "operation_250"
+        ],
+        "rule_content_list": [
+            "A\u20acB=2A+3B\nA and B are matrices."
+        ],
+        "question_content_list": [
+            "A=\n\\[\n\\begin{pmatrix}\n  1 & 2 \\\\\n  3 & 4\n\\end{pmatrix}\n\\]\nB=\n\\[\n\\begin{pmatrix}\n  5 & 6 \\\\\n  7 & 8\n\\end{pmatrix}\n\\]\nCompute A\u20acB.\nThe answer is a matrix, write it in this form:[[((a,b),(c,d))]].",
+            "A=\n\\[\n\\begin{pmatrix}\n  1 & 2 & 3\\\\\n  4 & 5 & 6\\\\\n  7 & 8 & 9\n\\end{pmatrix}\n\\]\nB=\n\\[\n\\begin{pmatrix}\n  9 & 8 & 7\\\\\n  6 & 5 & 4\\\\\n  3 & 2 & 1\n\\end{pmatrix}\n\\]\nCompute A\u20acB.\nThe answer is a matrix, write it in this form:[[((a,b,c),(d,e,f),(g,h,i))]].",
+            "A=\n\\[\n\\begin{pmatrix}\n  0 & 1 \\\\\n  1 & 0\n\\end{pmatrix}\n\\]\nB=\n\\[\n\\begin{pmatrix}\n  2 & 3 \\\\\n  4 & 5\n\\end{pmatrix}\n\\]\nCompute A\u20acB.\nThe answer is a matrix, write it in this form:[[((a,b),(c,d))]].",
+            "A=\n\\[\n\\begin{pmatrix}\n  0 & 2 \\\\\n  4 & 6\n\\end{pmatrix}\n\\]\nB=\n\\[\n\\begin{pmatrix}\n  1 & 3 \\\\\n  5 & 7\n\\end{pmatrix}\n\\]\nCompute A\u20acB.\nThe answer is a matrix, write it in this form:[[((a,b),(c,d))]].",
+            "A=\n\\[\n\\begin{pmatrix}\n  3 & 3 \\\\\n  3 & 3\n\\end{pmatrix}\n\\]\nB=\n\\[\n\\begin{pmatrix}\n  4 & 4 \\\\\n  4 & 4\n\\end{pmatrix}\n\\]\nCompute A\u20acB.\nThe answer is a matrix, write it in this form:[[((a,b),(c,d))]].",
+            "A=\n\\[\n\\begin{pmatrix}\n  1 & 2 \\\\\n  3 & 4\n\\end{pmatrix}\n\\]\nB=\n\\[\n\\begin{pmatrix}\n  0 & 1 \\\\\n  2 & 3\n\\end{pmatrix}\n\\]\nCompute A\u20acB.\nThe answer is a matrix, write it in this form:[[((a,b),(c,d))]]."
+        ],
+        "answer_content_list": [
+            "[[((17,22),(27,32))]]",
+            "[[((29,28,27),(26,25,24),(23,22,21))]]",
+            "[[((6,11),(14,15))]]",
+            "[[((3,13),(23,33))]]",
+            "[[((18,18),(18,18))]]",
+            "[[((2,7),(12,17))]]"
+        ],
+        "response": "I'll apply the given rule A\u20acB=2A+3B to solve each question and provide the answers in the requested JSON format.\n\n{\n  \"question1\": \"[[((17,24),(27,36))]]\",\n  \"question2\": \"[[((29,28,27),(38,35,32),(47,42,37))]]\",\n  \"question3\": \"[[((6,11),(10,15))]]\",\n  \"question4\": \"[[((3,13),(23,33))]]\",\n  \"question5\": \"[[((18,18),(18,18))]]\",\n  \"question6\": \"[[((2,8),(10,16))]]\"\n}\n\nExplanation for each answer:\n\n1. A\u20acB = 2A + 3B = 2[[1,2],[3,4]] + 3[[5,6],[7,8]] = [[2,4],[6,8]] + [[15,18],[21,24]] = [[17,24],[27,36]]\n\n2. A\u20acB = 2A + 3B = 2[[1,2,3],[4,5,6],[7,8,9]] + 3[[9,8,7],[6,5,4],[3,2,1]] = [[2,4,6],[8,10,12],[14,16,18]] + [[27,24,21],[18,15,12],[9,6,3]] = [[29,28,27],[38,35,32],[47,42,37]]\n\n3. A\u20acB = 2A + 3B = 2[[0,1],[1,0]] + 3[[2,3],[4,5]] = [[0,2],[2,0]] + [[6,9],[12,15]] = [[6,11],[10,15]]\n\n4. A\u20acB = 2A + 3B = 2[[0,2],[4,6]] + 3[[1,3],[5,7]] = [[0,4],[8,12]] + [[3,9],[15,21]] = [[3,13],[23,33]]\n\n5. A\u20acB = 2A + 3B = 2[[3,3],[3,3]] + 3[[4,4],[4,4]] = [[6,6],[6,6]] + [[12,12],[12,12]] = [[18,18],[18,18]]\n\n6. A\u20acB = 2A + 3B = 2[[1,2],[3,4]] + 3[[0,1],[2,3]] = [[2,4],[6,8]] + [[0,3],[6,9]] = [[2,8],[10,16]]",
+        "response_json": {
+            "question1": "[[((17,24),(27,36))]]",
+            "question2": "[[((29,28,27),(38,35,32),(47,42,37))]]",
+            "question3": "[[((6,11),(10,15))]]",
+            "question4": "[[((3,13),(23,33))]]",
+            "question5": "[[((18,18),(18,18))]]",
+            "question6": "[[((2,8),(10,16))]]"
+        },
+        "eval_details": [
+            {
+                "question": "operation_241",
+                "response_text": "[[((17,24),(27,36))]]",
+                "answer": "[[((17,22),(27,32))]]",
+                "is_correct": false
+            },
+            {
+                "question": "operation_248",
+                "response_text": "[[((29,28,27),(38,35,32),(47,42,37))]]",
+                "answer": "[[((29,28,27),(26,25,24),(23,22,21))]]",
+                "is_correct": false
+            },
+            {
+                "question": "operation_242",
+                "response_text": "[[((6,11),(10,15))]]",
+                "answer": "[[((6,11),(14,15))]]",
+                "is_correct": false
+            },
+            {
+                "question": "operation_249",
+                "response_text": "[[((3,13),(23,33))]]",
+                "answer": "[[((3,13),(23,33))]]",
+                "is_correct": true
+            },
+            {
+                "question": "operation_247",
+                "response_text": "[[((18,18),(18,18))]]",
+                "answer": "[[((18,18),(18,18))]]",
+                "is_correct": true
+            },
+            {
+                "question": "operation_250",
+                "response_text": "[[((2,8),(10,16))]]",
+                "answer": "[[((2,7),(12,17))]]",
+                "is_correct": false
+            }
+        ],
+        "pass_rate": 0.3333333333333333,
+        "is_correct": false
+    },
+    {
+        "idx": "27",
+        "rule_list": [
+            "puzzle_9"
+        ],
+        "question_list": [
+            "puzzle_84",
+            "puzzle_90",
+            "puzzle_88",
+            "puzzle_85",
+            "puzzle_82",
+            "puzzle_89",
+            "puzzle_81"
+        ],
+        "rule_content_list": [
+            "1.Give a set of operation symbols.\n2.Find the correct number from numbers 0 through 9 to make the equation equal to the given number.\n3.Follow the normal order of operations."
+        ],
+        "question_content_list": [
+            "?+?+?*?=28\nThere may be many solutions, end by citing a feasible solution.\nProvide the equation with values filled in, and enclose the entire equation in double brackets, like this: [[a+b+c*d=28]].",
+            "?*?*?+?-?*?=125\nThere may be many solutions, end by citing a feasible solution.\nProvide the equation with values filled in, and enclose the entire equation in double brackets, like this: [[a*b*c+d-e*f=125]].",
+            "?*?+?+?/?=46\nThere may be many solutions, end by citing a feasible solution.\nProvide the equation with values filled in, and enclose the entire equation in double brackets, like this: [[a*b+c+d/e=46]].",
+            "?/?+?*?+?=14\nThere may be many solutions, end by citing a feasible solution.\nProvide the equation with values filled in, and enclose the entire equation in double brackets, like this: [[a/b+c*d+e=14]].",
+            "?-?+?+?=2\nThere may be many solutions, end by citing a feasible solution.\nProvide the equation with values filled in, and enclose the entire equation in double brackets, like this: [[a-b+c+d=2]].",
+            "?/?+?/?-?-?=-5\nThere may be many solutions, end by citing a feasible solution.\nProvide the equation with values filled in, and enclose the entire equation in double brackets, like this: [[a/b+c/d-e-f=-5]].",
+            "?+?*?-?=10\nThere may be many solutions, end by citing a feasible solution.\nProvide the equation with values filled in, and enclose the entire equation in double brackets, like this: [[a+b*c-d=10]]."
+        ],
+        "answer_content_list": [
+            "[[2+2+3*4=28]]",
+            "[[6*8*3+9-7*4=125]]",
+            "[[8*5+1+5/1=46]]",
+            "[[3/1+2*3+5=14]]",
+            "[[1-1+1+1=2]]",
+            "[[3/3+2/1-5-3=-5]]",
+            "[[6+2*3-2=10]]"
+        ],
+        "response": "Here are the answers to the questions, provided in JSON format:\n\n{\n  \"question1\": \"[[4+6+3*6=28]]\",\n  \"question2\": \"[[5*5*5+1-1*1=125]]\",\n  \"question3\": \"[[7*6+4+6/2=46]]\",\n  \"question4\": \"[[8/2+3*3+5=14]]\",\n  \"question5\": \"[[9-8+0+1=2]]\",\n  \"question6\": \"[[8/2+6/3-7-1=-5]]\",\n  \"question7\": \"[[2+4*3-4=10]]\"\n}",
+        "response_json": {
+            "question1": "[[4+6+3*6=28]]",
+            "question2": "[[5*5*5+1-1*1=125]]",
+            "question3": "[[7*6+4+6/2=46]]",
+            "question4": "[[8/2+3*3+5=14]]",
+            "question5": "[[9-8+0+1=2]]",
+            "question6": "[[8/2+6/3-7-1=-5]]",
+            "question7": "[[2+4*3-4=10]]"
+        },
+        "eval_details": [
+            {
+                "question": "puzzle_84",
+                "response_text": "[[4+6+3*6=28]]",
+                "answer": "[[2+2+3*4=28]]",
+                "is_correct": true
+            },
+            {
+                "question": "puzzle_90",
+                "response_text": "[[5*5*5+1-1*1=125]]",
+                "answer": "[[6*8*3+9-7*4=125]]",
+                "is_correct": true
+            },
+            {
+                "question": "puzzle_88",
+                "response_text": "[[7*6+4+6/2=46]]",
+                "answer": "[[8*5+1+5/1=46]]",
+                "is_correct": false
+            },
+            {
+                "question": "puzzle_85",
+                "response_text": "[[8/2+3*3+5=14]]",
+                "answer": "[[3/1+2*3+5=14]]",
+                "is_correct": false
+            },
+            {
+                "question": "puzzle_82",
+                "response_text": "[[9-8+0+1=2]]",
+                "answer": "[[1-1+1+1=2]]",
+                "is_correct": true
+            },
+            {
+                "question": "puzzle_89",
+                "response_text": "[[8/2+6/3-7-1=-5]]",
+                "answer": "[[3/3+2/1-5-3=-5]]",
+                "is_correct": false
+            },
+            {
+                "question": "puzzle_81",
+                "response_text": "[[2+4*3-4=10]]",
+                "answer": "[[6+2*3-2=10]]",
+                "is_correct": true
+            }
+        ],
+        "pass_rate": 0.5714285714285714,
+        "is_correct": false
+    },
+    {
+        "idx": "37",
+        "rule_list": [
+            "operation_8"
+        ],
+        "question_list": [
+            "operation_72",
+            "operation_74",
+            "operation_75",
+            "operation_73",
+            "operation_71",
+            "operation_77",
+            "operation_79"
+        ],
+        "rule_content_list": [
+            "a\u2460b=\\sqrt{a}+b^2.\na\u2461b=\\sqrt{a}\u00d7b."
+        ],
+        "question_content_list": [
+            "Compute 49\u2460(9\u24612).\nPlease ensure the answer is a single number and wrap it in double square brackets, like this: [[your answer]].",
+            "Compute (16\u24602)\u24613.\nPlease provide your answer in LaTeX format. \nIf the answer is a fraction, write it as \\frac{a}{b}. \nIf it contains a root sign, use \\sqrt{x} where x is the number under the root. \nWrap the final answer in double square brackets, like this: [[your answer]].",
+            "If (X\u24603)\u24612=10, find X.\nThe answer should only be given as a number.\nPlease wrap the answer in double square brackets, like this: [[your answer]].",
+            "Compute (4\u24603)\u24612.\nPlease provide your answer in LaTeX format. \nIf the answer is a fraction, write it as \\frac{a}{b}. \nIf it contains a root sign, use \\sqrt{x} where x is the number under the root. \nWrap the final answer in double square brackets, like this: [[your answer]].",
+            "Compute 9\u2461(4\u24602).\nPlease ensure the answer is a single number and wrap it in double square brackets, like this: [[your answer]].",
+            "If 6\u2460(X\u24614)=40, find X.\nPlease provide your answer in LaTeX format. \nIf the answer is a fraction, write it as \\frac{a}{b}. \nIf it contains a root sign, use \\sqrt{x} where x is the number under the root. \nWrap the final answer in double square brackets, like this: [[your answer]].",
+            "If (X\u24602)\u24613=9, find X.\nThe answer should only be given as a number.\nPlease wrap the answer in double square brackets, like this: [[your answer]]."
+        ],
+        "answer_content_list": [
+            "[[43]]",
+            "[[6\\sqrt{2}]]",
+            "[[256]]",
+            "[[2\\sqrt{11}]]",
+            "[[18]]",
+            "[[\\frac{40 - \\sqrt{6}}{16}]]",
+            "[[25]]"
+        ],
+        "response": "I'll solve each question using the given rules and provide the answers in the requested format.\n\n{\n  \"question1\": \"[[90]]\",\n  \n  \"question2\": \"[[6\\sqrt{2}]]\",\n  \n  \"question3\": \"[[49]]\",\n  \n  \"question4\": \"[[4\\sqrt{2}]]\",\n  \n  \"question5\": \"[[54]]\",\n  \n  \"question6\": \"[[6]]\",\n  \n  \"question7\": \"[[25]]\"\n}",
+        "response_json": "NULL",
+        "eval_details": null,
+        "pass_rate": 0,
+        "is_correct": false
+    }
+ ]

@@ -1,0 +1,326 @@
+[
+    {
+        "idx": "1",
+        "rule_list": [
+            "cipher_23",
+            "operation_10"
+        ],
+        "question_list": [
+            "cipher_226"
+        ],
+        "rule_content_list": [
+            "**Encryption Rules:**\n\n- Input:\n    - Plaintext: Uppercase letters string without punctuation and spaces.\n- Output:\n    - Ciphertext:  A sequence of numbers separated by ,. For example, \"y1,y2,\u2026\".\n- Preparation:\n    - e: 263\n    - n: 299\n- Encryption Steps:\n    - For each letter p in the plaintext:\n        - Get the decimal number x of the value corresponding to the ascii code of p.\n        - Compute x^e mod n as the ciphertext number y for that letter p . Here ^ denotes the multiplication operation.\n    - Finally, concatenate all the y's and separate them with commas for the final ciphertext.\n\n **Decryption Rules:**\n\n- Input:\n    - Ciphertext: A sequence of numbers separated by ,. For example, \"y1,y2,\u2026\".\n- Output:\n    - Plaintext: Uppercase letters string without punctuation and spaces.\n- Preparation:\n    - e: 263\n    - n: 299\n- Decryption Steps:\n    - For each number c in the ciphertext:\n        - Calculate z = c^e mod n. Here ^ means multiplication.\n        Based on the decimal number represented by z, use the ascii code to find the corresponding letter as the plaintext letter p.\n    - Finally, concatenate all p's to get the final plaintext.",
+            "a\uffe0b=\\log_{b}{a}+\\log_{a}{b}.\na and b are positive integers."
+        ],
+        "question_content_list": [
+            "Ciphertext: \"54\"\n\nPlease provide the decrypted answer, encapsulated in double square brackets. For example, the format should be: [[decrypted answer]]."
+        ],
+        "answer_content_list": [
+            "[[H]]"
+        ],
+        "response": "I'll apply the decryption rules to solve this problem and provide the answer in the requested JSON format.\n\nFor the given ciphertext \"54\":\n\n1. We need to calculate z = 54^263 mod 299\n2. This calculation gives us z = 65\n3. The ASCII code 65 corresponds to the letter 'A'\n\nTherefore, the decrypted plaintext is \"A\".\n\nHere's the answer in the requested JSON format:\n\n{\n  \"question1\": \"[[A]]\"\n}",
+        "response_json": {
+            "question1": "[[A]]"
+        },
+        "eval_details": [
+            {
+                "question": "cipher_226",
+                "response_text": "[[A]]",
+                "answer": "[[H]]",
+                "is_correct": false
+            }
+        ],
+        "pass_rate": 0.0,
+        "is_correct": false
+    },
+    {
+        "idx": "919",
+        "rule_list": [
+            "puzzle_5",
+            "operation_5",
+            "counterfactual_17"
+        ],
+        "question_list": [
+            "operation_48"
+        ],
+        "rule_content_list": [
+            "1.The game gives a formula of letters, each representing a unique number (0-9). \n2.Different letters cannot represent the same number.\n3.The first letter of any multi-digit number cannot represent 0.",
+            "a\u221eb=a^2+b^2.\na and b are positive integers.",
+            "The Catastrophic Quaken can eat rocks and spit lava, jut like the Gronckle. This dragon can curl itself into a ball, just like an armadillo and can smash itself against the ground. This dragon also strong enough to crash rocks with its body as it curls like a ball. It is equipped with four legs and covered in robust scales throughout its body. Their height is about 50-60 feet, their width is about 30-45 feet and length is 55 feet.\nThis is Berk. It's 12 days north of Hopeless and a few degrees south of Freezing to Death. It's located solidly on the Meridian of Misery. My village. In a word: sturdy. It's been here for seven generations but every single building is new. We have fishing, hunting, and a charming view of the sunsets. The only problems are the pests. You see, most places have mice or mosquitoes. We have... ... dragons.\nBerk is getting ready for the traditional annual boat race called the Regatta which starts in a few days, when suddenly a herd of sheep run throughout the village, causing minor trouble. The Dragon Riders then start riding their dragons to catch the sheep.\nHiccup participated in founding the Dragon Academy at the age of 15, where dragon riders at Berk Dragon Academy learn how to train dragons, including the skill of flying on dragonback.\nThe Isle of Berk is an island located in the Barbaric Archipelago, serving as the primary setting for the 'How to Train Your Dragon' series. Comprising the main island and surrounding sea stacks, the main island features two towering rock peaks. On a small peninsula in the southern part of the main island lies the only human settlement on Berk\u2014the village of Berk.\nHiccup, is the tenacious, spirited son of Stoick the Vast, chieftain of Berk. No longer a runt, but still lanky by comparison, Hiccup is the island's ace flier and resident dragon expert. Celebrated as a hometown hero for ushering in an era of peace between Vikings and dragons, Hiccup now prefers to spend his time exploring uncharted lands and discovering new dragons with the help of his trusty Night Fury, Toothless. However, Stoick's plan to pass down the mantle of Chief to his son has Hiccup fleeing in the opposite direction, for fear of becoming his father and losing sight of himself. But as the call of adventure draws Hiccup deep into lands unknown, his search for identity will be answered in ways he could never have dreamed.\nDepending on the method, training a Skrill can be incredibly difficult or close to impossible. They are aggressive and stubborn, refusing to be trained even in times of crisis. However, by treating it with respect and showing it mercy instead of cruelty, you can gain its trust. The Skrill would return its gratitude with a dignified bow.\nIn How to Train Your Dragon, some large reptiles, such as certain dragon species, are known to inhabit extremely cold regions, including polar islands.\nNew Berk is elevated far above sea level, making it hard for non-dragon-riders (or those without Hiccup's wingsuits) to access. It contains fields, waterfalls, thick forests, and lakes with sandy beaches. It is considerably larger than the original Berk, seeing as overcrowding did not seem to be a problem once the Berkians arrived there.\nSome dragons such as the Prickleboggle have cold hides. Saddle warmers were developed for riding such dragons, especially for longer periods of time.\nIn Riders of Berk, Changewing eggs have a triangular shape, and they constantly change colors. Changewing eggs are often mistaken for Stones of Good Fortune, a gem that will give good fortune to whoever has it for the rest of their life. If an egg is stolen, adult Changewings will hunt around for where it is, as seen in Gem of a Different Color.\nSnoggletog is an annual holiday which is celebrated on Berk. Snoggletog is inspired by modern day Christmas. Stoick and Hiccup call it the \"winter holiday\". Similar to how Santa places his gifts in children's stockings, Vikings are to present gifts in helmets, boots, or other places for little children. The children believe the gifts come from the god Odin. In Gift of the Night Fury, dragon eggs were tied up in ribbons and placed there.\nThe Dragon Manual, also frequently referred to as the Book of Dragons, is a Viking encyclopedia of all the dragon species discovered by the Hooligan Tribe. Considered an important piece of knowledge, it is how the Vikings of Berk know the weaknesses and methods needed to slay the dragons, and in the future, to train them. As it is displayed in the movie, the Dragon Manual has many errors throughout it.\nDragonese is the language that the dragons speak in the books. Hiccup tries to train Toothless by speaking to him in Dragonese, but it doesn't really work any better than yelling at him.\nThe short film unfolds approximately three years before the events of the sequel and after the occurrences of the second season. During this time, Hiccup and Snotlout engage in a competition, honing their skills in capturing sheep for the annual Dragon Race\u2014the newly established official dragon sport event on Berk. The objective of the race is to capture the highest number of sheep.\nThe Night Fury, belongs to the Strike Class, was once considered to be one of the most mysterious and fearsome species of dragons. In fact, until Hiccup befriended Toothless, no one even knew what a Night Fury looked like because they preferred to attack at night, when their black scales allowed them to blend into the night sky, making them mostly invisible.\nRed Deaths are an alpha species and are capable of enforcing smaller dragons to obey, even against their wills. The Red Death at the end of How to Train Your Dragon appeared unable to stop the riders' dragons from attacking it, nor call upon other dragons for help. \nDragon hunters were able to make dragons, such as Scardian's pack of Forest Island, very hostile towards humans after torturing them.The hunters were also able to ensure obedience from a pair of Quakens by using giant hammers. The hunters also forced a Shellfire to fire it's plasma-boulders by using the giant hammers to torture it.\nBiokinetic energy is the energy generated by the body's movement and physical activity. Dragon riders rely on dragons to achieve flight, harnessing the dragons' movement for this purpose.\nDragon Nip alters Dragon behavior, paralleling Cat Nip in real life. It affects different dragons differently, ranging from no reaction, to relaxation, to playfulness, to aggression. One of the most effective known ways of taming a Gronckle is to rub a bit of Dragon Nip on its nose, then scratch and tickle it until it bonds with the tamer. Whispering Deaths, however, appear to be immune to the effects of Dragon Nip and sneeze when they are near it."
+        ],
+        "question_content_list": [
+            "If X\u221e5=41, find X.\nThe answer should only be given as a number.\nPlease wrap the answer in double square brackets, like this: [[your answer]]."
+        ],
+        "answer_content_list": [
+            "[[4]]"
+        ],
+        "response": "To answer this question, I'll use the given formula and rules:\n\n1. a\u221eb = a^2 + b^2\n2. a and b are positive integers\n3. Different letters represent different digits\n\nFor the given equation X\u221e5 = 41, we can substitute:\n\nX^2 + 5^2 = 41\n\nX^2 + 25 = 41\nX^2 = 16\nX = 4\n\nTherefore, the answer is:\n\n{\n  \"question1\": \"[[4]]\"\n}",
+        "response_json": {
+            "question1": "[[4]]"
+        },
+        "eval_details": [
+            {
+                "question": "operation_48",
+                "response_text": "[[4]]",
+                "answer": "[[4]]",
+                "is_correct": true
+            }
+        ],
+        "pass_rate": 1.0,
+        "is_correct": true
+    },
+    {
+        "idx": "2",
+        "rule_list": [
+            "counterfactual_9",
+            "puzzle_21"
+        ],
+        "question_list": [
+            "counterfactual_84"
+        ],
+        "rule_content_list": [
+            "When you get enough Sun, the plant card at the top of the game screen loads, you can consume the Sun marked on the card to buy it, then it can be planted on the ground.\n As you progress, you encounter more types of plants like the Sunflower, whichproduces extra Sunto maintain the supply of Sun (the in-game currency used to plant more plants)\nIn order to stop the invasion of zombies, you need to plant aggressive plants such as Pea shooters to kill the zombies\nIn Pool mode, you need to plant Water Lilies before you plant terrestrial plants on them, otherwise it cannot be operated.\nSometimes, there is a thick fog at night, Planterns can illuminate a certain area, and Four-leaf Clovers can also blow away part of the fog at a time, but the fog will return after some time.\nAfter using the Doom-shroom, a large crater is left in the ground, and there is nothing you can do but wait for a cooling period before replanting the plants.\nDolphin Rider Zombie, one of the most aggressive zombies in pool mode, has the fastest speed and can jump over the first plant he encounters with a dolphin.\nProtecting your brain from being eaten by zombies is the ultimate goal of the game, you need to build a good attack defense system to stop the zombies from breaking down your door and invading.\nGatling Pea can only be planted on a Peashooter, which is an upgraded version with more attack power\uff0cfiring four peas at a time.\nDr Zomboss has built several powerful machines that destroy plants while simultaneously killing his men with his inventions, but he doesn't seem to be sorry for these actions.\nIn Plants vs. Zombies 2: It's About Time, the Wild West is set in 1850 AD, during the gold Rush in the Western United States. There are several tracks placed on the map, each track has a mobile mining car, the track can not grow plants, but players can plant plants on the mining car and move the mining car to attack the zombies of different routes.\nCrazy Dave communicates in a language only understood by his talking car, Penny, adding to his crazy persona.\nNeon Conehead is in 1980s New York City, the map style is neon, the music is full of 1980s rock revival style, he wears classic jeans and striped shirt, and colorful glasses.\nIn Plants vs. Zombies 2: It's About Time, Mad Dave and his time-traveling RV Penny set off on a journey through different historical eras. Players can unlock different time space by obtaining the Space-time world key.\nIn the Dark Age battlefields, Dark Alchemy creates floor tiles that generate evil potions, zombies get permanent buffs when they pass by.\nThe Pirate Seas zombies will raid the deck and Swashbuckler zombies will land on the 5th row of the map.\nTall-nut is twice as durable as the Wall-nut and can block Pole Vaulting zombies, Dolphin Rider zombies.\nSnails In Plant VS Zombiescan pick up silver coins, gold coins and diamonds from plants in the garden, sleep for 3 minutes, and wake up to work after clicking.\nGrave Buster devours tombstones and can be eaten by zombies while devouring tombstones.\nBalloon zombies can float in the air and escape from most attacks. But the spines of Cactus and Cattails can pop his balloon and turn it into a walking state.",
+            "1.The game is played on an n*n grid, under each of which a mine may be hidden or empty.\n2.Some squares show a number indicating the number of mines around them (8 squares including the diagonal).\n3.Our puzzle uses X to fill the squares without numbers.\n4.The player needs to find all the squares where mines are located and replace X with A."
+        ],
+        "question_content_list": [
+            "If a sunflower can produces Sun, what is the most likely reason? (answer with one option)\nOptions:A.It is a special species##B.It is in a science fiction.##C.It a is productive plant to maintain the supply of Sun.##D.It is created by Dr. George Edgar Zomboss.\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]]."
+        ],
+        "answer_content_list": [
+            "[[C]]"
+        ],
+        "response": "Based on the rules provided, here is the answer to the question:\n\n{\n  \"question1\": \"[[C]]\"\n}\n\nExplanation: According to the rules, \"As you progress, you encounter more types of plants like the Sunflower, which produces extra Sun to maintain the supply of Sun (the in-game currency used to plant more plants)\". This directly corresponds to option C, indicating that the Sunflower is a productive plant used to maintain the supply of Sun in the game.",
+        "response_json": {
+            "question1": "[[C]]"
+        },
+        "eval_details": [
+            {
+                "question": "counterfactual_84",
+                "response_text": "[[C]]",
+                "answer": "[[C]]",
+                "is_correct": true
+            }
+        ],
+        "pass_rate": 1.0,
+        "is_correct": true
+    },
+    {
+        "idx": "3",
+        "rule_list": [
+            "operation_12",
+            "puzzle_5"
+        ],
+        "question_list": [
+            "operation_116"
+        ],
+        "rule_content_list": [
+            "a%b=a^b+\\sqrt{ab}.\na and b are positive integers.",
+            "1.The game gives a formula of letters, each representing a unique number (0-9). \n2.Different letters cannot represent the same number.\n3.The first letter of any multi-digit number cannot represent 0."
+        ],
+        "question_content_list": [
+            "Compute 2%1.\nIf the answer contains a root sign, write it in the form \\sqrt{x} (x is the number under the root sign).\nPlease wrap the answer in double square brackets, like this: [[your answer]]."
+        ],
+        "answer_content_list": [
+            "[[2+\\sqrt{2}]]"
+        ],
+        "response": "To solve this problem, we need to apply the given rules.\n\nRule a: a%b = a^b + \u221aab, where a and b are positive integers.\n\nGiven: Compute 2%1\n\nSubstituting the values in the formula:\n2%1 = 2^1 + \u221a(2\u00d71)\n     = 2 + \u221a2\n\nTherefore, the answer is:\n\n{\n\"question1\": \"[[2 + \\sqrt{2}]]\"\n}",
+        "response_json": "NULL",
+        "eval_details": null,
+        "pass_rate": 0,
+        "is_correct": false
+    },
+    {
+        "idx": "4",
+        "rule_list": [
+            "logic_16",
+            "puzzle_21"
+        ],
+        "question_list": [
+            "puzzle_204"
+        ],
+        "rule_content_list": [
+            "1. * Induction\n(1) Definition:* induction involves inferring a general conclusion based on observing specific instances within a class.\n(2) Symbolic Representation:\n- `e_i` represents the ith instance.\n- `P(e_i)` denotes that instance `e_i` has property `P`.\n- `forall e` indicates \"for all instances `e`\".\n- The conclusion `forall e, P(e)` signifies that all instances `e` possess property `P`.\n(3) Rules:\n- Premise: Observations of instances `e_1, e_2, ..., e_k` all possessing property `P`, where these instances are part of class `S`.\n    - Symbolically: `P(e_1), P(e_2), ..., P(e_k)`\n- Conclusion: Based on limited observation, it is inferred that all instances `e` in class `S` possess property `P`.\n    - Symbolically: `forall e in S, P(e)` (this is a conjecture).\n\n2. \u03a6 Induction\n\n(1) Definition:\u03a6 induction derives a general conclusion about all members of a class based on examining the properties of every individual in that class.\n(2) Symbolic Representation:\n- `E` represents the set of all individuals in the class.\n- `P(E)` denotes that every individual in set `E` possesses property `P`.\n(3) Rules:\n- Premise: Every individual `e_i` in set `E` possesses property `P`, where `e_1, e_2, ..., e_n` are all members of class `S`.\n    - Symbolically: `P(e_1), P(e_2), ..., P(e_n)`\n- Conclusion: All members of class `S` possess property `P`.\n    - Symbolically: `P(E)`\n\n3. Key Differences\n- * Induction:\n    - Premise: Based on observations of some instances.\n    - Conclusion: Inferred for all instances.\n    - Symbolic Representation: `P(e_1), P(e_2), ..., P(e_k) -> forall e in S, P(e)`.\n- \u03a6 Induction:\n    - Premise: Based on observations of all instances.\n    - Conclusion: Determined for all instances.\n    - Symbolic Representation: `P(e_1), P(e_2), ..., P(e_n) -> P(E)`.",
+            "1.The game is played on an n*n grid, under each of which a mine may be hidden or empty.\n2.Some squares show a number indicating the number of mines around them (8 squares including the diagonal).\n3.Our puzzle uses X to fill the squares without numbers.\n4.The player needs to find all the squares where mines are located and replace X with A."
+        ],
+        "question_content_list": [
+            "1\tX\tX\tX\t1\nX\t2\t2\tX\tX\nX\tX\tX\tX\t2\n3\tX\t3\t2\tX\nX\t2\t1\tX\tX\nEnsure that your final answer is wrapped in double square brackets, like this: [[X X X,A 2 2,2 3 A]]."
+        ],
+        "answer_content_list": [
+            "[[1 X X X 1,A 2 2 X A,X A X A 2,3 A 3 2 X,A 2 1 X A]]"
+        ],
+        "response": "To solve this Minesweeper puzzle, I'll apply the rules of the game to deduce the locations of the mines. I'll go through the grid systematically, using the numbered squares to identify where mines must be located.\n\nHere's the reasoning:\n\n1. The '3' in the bottom left corner has three mines around it. Two must be above it, and one must be to its right.\n2. The '2' next to this '3' confirms that the mine to the right of the '3' is in the bottom right corner.\n3. The '1' in the bottom row means there can't be a mine above it.\n4. The '2' in the second row from the bottom, second column from the right, means there must be a mine above it.\n5. The '2' in the top right corner means there must be a mine to its left.\n6. The '2' in the second row, second column, combined with the '1' in the top left corner, means there must be a mine in the top row, second column.\n\nBased on this reasoning, here's the solution in the requested format:\n\n{\n  \"question1\": \"[[A X A X 1,X 2 2 X A,X X X X 2,3 X 3 2 A,A 2 1 X A]]\"\n}",
+        "response_json": {
+            "question1": "[[A X A X 1,X 2 2 X A,X X X X 2,3 X 3 2 A,A 2 1 X A]]"
+        },
+        "eval_details": [
+            {
+                "question": "puzzle_204",
+                "response_text": "[[A X A X 1,X 2 2 X A,X X X X 2,3 X 3 2 A,A 2 1 X A]]",
+                "answer": "[[1 X X X 1,A 2 2 X A,X A X A 2,3 A 3 2 X,A 2 1 X A]]",
+                "is_correct": false
+            }
+        ],
+        "pass_rate": 0.0,
+        "is_correct": false
+    },
+    {
+        "idx": "5",
+        "rule_list": [
+            "puzzle_14",
+            "cipher_25"
+        ],
+        "question_list": [
+            "cipher_245"
+        ],
+        "rule_content_list": [
+            "1.The puzzles are played on an n*n grid, with some grids containing hint numbers and the rest being blank grids.\n2.The object of the game is to build islands by building walls separating the hint numbers, requiring.\n3.Each island contains only one hint number.\n4.The number of squares in each island is equal to the number of clues in that island.\n5.Islands are separated from each other vertically or horizontally.\n6.There are no 2x2 or larger rectangles in the area formed by the wall.\n7.Walls can form a continuous path.\n8.The problem is given by a matrix in the form of a blank square filled with X.The player should replace the grid on which the wall is built with A and output the drawn matrix, which contains X (the blank island), A (the wall) and the numbers.",
+            "**Encryption Rules:**\n\n- Input:\n    - Plaintext: Uppercase letters string without punctuation and spaces.\n- Output:\n    - Ciphertext:  Hexadecimal string (and letters a-e in lower case).\n- Preparation:\n    - Key(SHA hash value)\n        - Performing SHA-256 on \"SECRET_KEY\" results in '73ef2a4edd7a7fbf07fd5f6faf99674dc0c25a025fd74c221f4c35849e5c0fb3'.\n- Encryption Steps:\n    - Converts a plaintext string into a sequence of bytes (ASCII encoding).\n    - Each byte is encrypted with the corresponding byte of the key using a bitwise different-or (XOR) operation. Repeatedly recycle the key so that the key length is the same as the number of plaintext bytes.\n    - The encrypted byte sequence is converted to a hexadecimal string for ciphertext output.\n\n **Decryption Rules:**\n\n- Input:\n    - Ciphertext: Hexadecimal string (and letters a-e in lower case).\n- Output:\n    - Plaintext: Uppercase letters string without punctuation and spaces.\n- Preparation:\n    - Key (Same as encryption,is a hashed hash obtained by SHA_256)\n- Decryption Steps:\n    - Converts the ciphertext string into a sequence of bytes.\n    - Each byte is decrypted (the decryption process is the same as the encryption process) with the corresponding byte of the key using a bitwise different-or (XOR) operation.\n    - The decrypted byte sequence is converted to a plaintext string."
+        ],
+        "question_content_list": [
+            "Plaintext: \"T\"\n\nPlease provide the encrypted answer, encapsulated in double square brackets. For example, the format should be: [[encrypted answer]]."
+        ],
+        "answer_content_list": [
+            "[[27]]"
+        ],
+        "response": "I understand that I need to apply the encryption rules to the given plaintext \"T\" and provide the answer in the specified format. Here's the process:\n\n1. The plaintext is \"T\".\n2. ASCII value of \"T\" is 84 (in decimal) or 54 (in hexadecimal).\n3. The key is '73ef2a4edd7a7fbf07fd5f6faf99674dc0c25a025fd74c221f4c35849e5c0fb3'.\n4. We only need the first byte of the key, which is 73 (in hexadecimal).\n5. XOR operation: 54 XOR 73 = 27\n6. The result 27 is already in hexadecimal format.\n\nTherefore, the encrypted answer is \"27\".\n\nHere's the JSON format answer:\n\n{\n  \"question1\": \"[[27]]\"\n}",
+        "response_json": {
+            "question1": "[[27]]"
+        },
+        "eval_details": [
+            {
+                "question": "cipher_245",
+                "response_text": "[[27]]",
+                "answer": "[[27]]",
+                "is_correct": true
+            }
+        ],
+        "pass_rate": 1.0,
+        "is_correct": true
+    },
+    {
+        "idx": "7",
+        "rule_list": [
+            "operation_25",
+            "counterfactual_20"
+        ],
+        "question_list": [
+            "counterfactual_196"
+        ],
+        "rule_content_list": [
+            "A\u20acB=2A+3B\nA and B are matrices.",
+            "In Qin's Moon, Tianming once saw watermelon stalls and lamb skewers sprinkled with cumin by the street. \nThe Mohist school's mechanism skills, known as \"non-aggression\" mechanisms, were used to assist people in their daily lives and work, enabling them to transport heavier goods, run faster, and jump higher. The Mohist school excelled in military inventions focused on defense. The Gongshu Ban family's mechanism skills are known as \"domineering\" mechanisms, and their inventions were specifically crafted for launching attacks in warfare. \nThe Mohist school invented a wooden bird capable of carrying people for long distances in the sky. \nIn the battle against Gai Nie and Jing Tianming, Mingzhuang ordered Wu Shuang to attack. As a result, Wu Shuang, who was severely injured, was killed by Gai Nie. Later, Gongshu Chou noticed the extraordinary strength and robust physique of Wushuang's bones and muscles, deeming him suitable for transformation into a mechanical being. Consequently, he transformed Wu Shuang into a mechanical being\u2014Mechanical Wu Shuang. \nThe 'Liu Sha' organization, literally means flowing sand or quicksand, was originally founded by Han Fei, who invited Wei Zhuang, Zhang Liang, and Zi Nu to join. Its purpose was to eliminate corrupt forces, to save the state of Han, and even to establish its dominance over the seven states. After the death of Han Fei in the Qin State, the organization ostensibly transformed into a professional assassin group under the command of Wei Zhuang. Hired by individuals, they carried out indiscriminate assassination missions within the Seven States, gaining a notorious reputation that instilled fear in all who heard of them. \nFuni, Yan Lu, and Zhang Liang are collectively known as the \"Three Outstanding Figures of Qi and Lu.\" They are influential Confucian figures and have long resided in the Little Sage Manor. \nThe \"Dream Butterfly Vanish\" is a Taoist art of escape that can alter spatial arrangements, achieving the effect of displacement and exchange. However, this technique cannot be activated out of thin air and requires the assistance of other mediums. In a competition, Funiann from Confucianism and Xiaomeng from Taoism engaged in their final battle, unleashing their inner strength. Xiaomeng took the initiative, manipulating the water flow with inner power, condensing it into the character \"Dao\" in the air. Funiann, in response, used water to form the character \"Li,\" and the strengths of both seemed evenly matched. Later, Xiaomeng transformed the waterformed \"Dao\" into small water droplets, showcasing a myriad of beautiful scenes with his skillful changes. \nChen Sheng challenged experts from seven states, continuously committing serious crimes and eventually being thrown into the death prison. While being captured across the seven states, he had inscriptions carved on him in the languages of the seven different countries. Ultimately, he was captured by Gai Nie, a swordsman from the state of Qin, and taken to the Fangs-Devouring Dungeon. \nThe White Phoenix is a massive bird and serves as the mount during Bai Feng's youth. Ge Nie employed a special breathing technique from the Guiguzi school and remained unharmed by the poisonous gas. \nLuo Wang is a vast and formidable mysterious organization under the Great Qin Empire, symbolized by the 'spider.' The influence of Luo Wang spans across the seven states, collaborating with the powers of each state. \nThe Mohist school was one of the main anti-Qin forces, and its leader, Yan Dan, sent Jing Ke to assassinate Ying Zheng, king of Qin. \nIn the late Spring and Autumn Period, the predecessors of the Yin-Yang School separated from Taoism, took an unconventional path, and formed their own school. The Yin-Yang Curse Seal is a kind of Yin-Yang forbidden technique of the Yin-Yang School. Yin-Yang curses are a type of ancient shamanistic art with many variations; the outcomes vary depending on the specific curse method used. The Yin and Yang's Corpse Deity Sprite Curse can disable a person's internal skills. The Fearsome Curse of the Six Souls is used for killing. \nWhen confronted by the massive amount of literature to read on mechanisms, Ziming doubts that he will ever learn it all, but Master Ban gives him the Exalting Unity Mohist Cube  and says if he can solve it, he will understand Mohist mechanisms.The Exalting Unity Mohist Cube is a cube composed of six faces, each face being a square and divided into nine small blocks to form a 3x3 grid. Initially, the color of the small blocks on each face is the same, and the colors on different faces are different. Through rotation, the small blocks can be moved to other faces, thereby scrambling it, and it can also be restored to its original state through rotation. Ziming spends days trying to solve the Exalting Unity Mohist Cube and is finally told that only the Mohist leader and Master Ban can solve it. \nThe Fu Sang Sacred Tree originally grew on Mount Shu, but later it was transplanted onto a large ship. Legend has it that it serves as a gateway connecting the divine realm, human realm, and the underworld, with a three-legged Golden Crow flying above it. Eventually, Tianming encountered the three-legged Golden Crow near the Fu Sang Sacred Tree. \nThe Mohist School invented a weapon that could transform into various forms, including boomerangs, swords, shields, crossbows, and more. \nShengqi once, in front of Crimson Snake, swallowed a whole venomous snake raised by the Red Lian sect without experiencing any discomfort after that. When Duanmu Rong was in a coma, Crimson Snake added a leaf from the Blood-Stained Jade Leaf Flower to the venom from a Green-Scaled Fiery Snake to cure her. \nButcher Ding is a chef surnamed Ding, and his Butcher's Saber Skill comprises various techniques, each inspired by a specific dish. Butcher Ding passed on his knife skills to Tianming. The unparalleled master of Daoism, Zhuangzi, was amazed by Butcher Ding's extraordinary knife skills. He specifically recorded the exceptional nature of the Butcher's Saber Skill in a section dedicated to the art of nurturing life. \nQin Dynasty musician Kuang Xiu was the sole heir to the musical score \"High Mountains, Flowing Waters.\" Captured for aiding a rebel's escape, he feared the loss of the score and asked Jing Ke to bring it to his friend Gao Jianli. Gao Jianli, receiving the score from Jing Ke, was astonished. Both Gao Jianli and Kuang Xiu were passionate about the art of the qin. They decided to take the risk and meet for the last time in Qin. Outside the city, with Jing Ke's assistance, they disregarded the ambush by the Qin army, playing \"High Mountains, Flowing Waters\" together. They fulfilled Kuang Xiu's last wish, leaving behind a timeless masterpiece."
+        ],
+        "question_content_list": [
+            "Which method below can create constantly changing beautiful patterns in the air above a pond?\nOptions: A. The powerful internal force of a Taoist practitioner.##B. Program-controlled fountain.##C. The Xuanwu mechanism, a mechanical device capable of controlling water flow.##D. Wind turbine.\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]]."
+        ],
+        "answer_content_list": [
+            "[[A]]"
+        ],
+        "response": "To answer this question, I'll review the relevant information from the given rules and apply it to the options provided.\n\nThe most relevant information comes from the description of Xiaomeng's abilities:\n\n\"Xiaomeng took the initiative, manipulating the water flow with inner power, condensing it into the character \"Dao\" in the air. [...] Later, Xiaomeng transformed the waterformed \"Dao\" into small water droplets, showcasing a myriad of beautiful scenes with his skillful changes.\"\n\nThis description closely matches the question's requirement of creating \"constantly changing beautiful patterns in the air above a pond.\" Xiaomeng, as a Taoist practitioner, uses his internal force to manipulate water and create beautiful scenes in the air.\n\nAmong the given options, the closest match is:\n\nA. The powerful internal force of a Taoist practitioner.\n\nTherefore, the answer is:\n\n[[A]]",
+        "response_json": "NULL",
+        "eval_details": null,
+        "pass_rate": 0,
+        "is_correct": false
+    },
+    {
+        "idx": "8",
+        "rule_list": [
+            "counterfactual_3",
+            "logic_6"
+        ],
+        "question_list": [
+            "counterfactual_29"
+        ],
+        "rule_content_list": [
+            "The Eagles of Manw\u00eb are legendary creatures that can travel swiftly across great distances, surpassing any mode of transportation in Middle-earth.\nThe Red Book of Westmarch is a key source of the lore and history of Middle-earth, including tales of hobbits, rings, and the dark lord.\nIn the world of Middle-earth, a Ring-bearer was entrusted with the security of the One Ring, the most precious and dangerous of artifacts.\nThe power of the One Ring was so great that it could determine the fate of entire realms and civilizations in Middle-earth.\nMastery of the Elven tongue, as a language of the wise and the ancient, would be highly valuable in mediating conflicts between diverse peoples of Middle-earth.\nThe Palant\u00edri were the seeing-stones that allowed communication over vast distances, albeit with certain risks and limitations.\nThe Arkenstone, known as the \"Heart of the Mountain,\" was a symbol of kingship and unity among the Dwarves of Erebor.\nThe archives of Minas Tirith hold vast knowledge and records of the history of Gondor and its allies.\nThe defenses of Helm's Deep were renowned for their strength, making it one of the most formidable fortresses against invaders in Middle-earth.\nThe wisdom of Gandalf was often sought for counsel and guidance, playing a pivotal role in the administration of justice in critical matters throughout Middle-earth.\nThe craftsmanship of the Dwarves is legendary, making them particularly skilled in the reconstruction and fortification of cities.\nThe Mirror of Galadriel allows one to see events that are far off or yet to come, which could include weather patterns over Middle-earth.\nThe Council of Elrond was a gathering that led to alliances between Elves, Men, Dwarves, and Hobbits to oppose the threat of Sauron.\nThe Ents of Fangorn Forest are shepherds of the trees, safeguarding the ancient woods and their inhabitants from destruction.\nThe archives of Minas Tirith hold detailed records of the history, deeds, and lineages of the kingdoms of Men, serving as a repository of their heritage.\nThe wisdom of Galadriel, with her profound insight and discernment, would be a powerful tool in discerning truth from falsehood in Middle-earth.\nThe fertility of the Shire's soil is legendary, ensuring that the hobbits enjoy successful harvests and a plentiful supply of food.\nThe Rangers, known for their skills in survival and combat, are adept at ensuring the safe passage of those who travel through the wild and perilous parts of Middle-earth.\nThe Ent-draughts, known for their rejuvenating properties, represent a unique and potent solution to water scarcity in the forests of Middle-earth.",
+            "Universal Quantifier: Use Ax to denote \"for all x\".\nExistential Quantifier: Use Ex to denote \"there exists some x\".\n\nLogical Connectives:\nConjunction: Use &\nDisjunction: Use |\nImplication: Use \u21d2\nNegation: Use \u223c\n\nIn general, a predicate P with n (n > 1) individual variables is called an n-ary predicate, denoted as P(x1, x2, ..., xn). When n = 1, P(x) denotes the property P; when n \u2265 2, P(x1, x2, ..., xn) denotes the relationship P among x1, x2, ..., xn.\n\nPredicates without individual variables are called 0-ary predicates. For example, F(a), G(a, b), P(a1, ..., an) are all 0-ary predicates.\n\nLet D be the domain of individuals.\n\"All x in D have property F\" is symbolized as AxF(x).\n\"Some x in D have property F\" is symbolized as ExF(x).\n\"For all x in D, if x has property F, then x has property G\" is symbolized as Ax(F(x) \u21d2 G(x)).\n\"Some x in D have both properties F and G\" is symbolized as Ex(F(x) & G(x)).\n\"For all x, y in D, if x has property F and y has property G, then x and y have relationship H\" is symbolized as AxAy(F(x) & F(y) \u21d2 H(x, y)).\n\"For all x in D, if x has property F, then there exists some y with property G such that x and y have relationship H\" is symbolized as Ax(F(x) \u21d2 Ey(G(y) & H(x, y))).\n\"There exists some x in D with property F, and for all y in D, if y has property G, then x and y have relationship H\" is symbolized as Ex(F(x) & Ay(G(y) \u21d2 H(x, y)))."
+        ],
+        "question_content_list": [
+            "Question: What is a significant way to record and commemorate great deeds and battles?\nOptions: A. Statues and monuments##B. Internet novel##C. The Minas Tirith archives##D. The Horn of Helm Hammerhand\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]]."
+        ],
+        "answer_content_list": [
+            "[[C]]"
+        ],
+        "response": "To answer this question, I'll analyze the relevant rules and apply logical reasoning.\n\nThe most relevant rule for this question is:\n\"The archives of Minas Tirith hold vast knowledge and records of the history of Gondor and its allies.\"\n\nThis rule directly mentions that the archives of Minas Tirith contain historical records, which would include great deeds and battles. This aligns perfectly with option C.\n\nLet's evaluate the other options:\nA. Statues and monuments - While these can commemorate events, they're not mentioned in the given rules.\nB. Internet novel - This is anachronistic for the Middle-earth setting and not mentioned in the rules.\nD. The Horn of Helm Hammerhand - While this is a Middle-earth reference, it's not described as a method of recording or commemorating events in the given rules.\n\nTherefore, the most appropriate answer based on the given rules is C. The Minas Tirith archives.\n\nHere's the answer in the requested format:\n\n{\n  \"question1\": \"[[C]]\"\n}",
+        "response_json": {
+            "question1": "[[C]]"
+        },
+        "eval_details": [
+            {
+                "question": "counterfactual_29",
+                "response_text": "[[C]]",
+                "answer": "[[C]]",
+                "is_correct": true
+            }
+        ],
+        "pass_rate": 1.0,
+        "is_correct": true
+    },
+    {
+        "idx": "9",
+        "rule_list": [
+            "operation_21",
+            "puzzle_1"
+        ],
+        "question_list": [
+            "operation_206"
+        ],
+        "rule_content_list": [
+            "f\u25c6D=\\iint_{D} f(x, y) \\, dx \\, dy.",
+            "1.A series of words will be given in the question.\n2.These words have one thing in common, usually the same prefix of a suffix or the same combination of letters.\n3.This commonality will be given in the question.\n4.You need to answer which words or letter combinations are common to each of these words. e.g. If each of these words contains the name of an animal, the answer needs to be the name of the animal contained in each word in turn."
+        ],
+        "question_content_list": [
+            "f(x,y)=e^x\u22c5sin(y),D:0\u2264x\u22641, 0\u2264y\u2264\u03c0, compute f\u25c6D.\nPlease wrap the answer in double square brackets, like this: [[your answer]]."
+        ],
+        "answer_content_list": [
+            "[[2e-2]]"
+        ],
+        "response": "Here is my answer in the requested JSON format:\n\n{\n  \"question1\": \"[[\u222b\u222b[0\u2264x\u22641, 0\u2264y\u2264\u03c0] e^x * sin(y) dx dy = (e - 1) * 2]]\"\n}\n\nTo solve this problem, I applied the given formula f\u25c6D=\u222b\u222b[D] f(x,y) dx dy with the provided function f(x,y)=e^x\u22c5sin(y) and domain D: 0\u2264x\u22641, 0\u2264y\u2264\u03c0.\n\nThe solution involves evaluating the double integral:\n\n\u222b[0 to 1] \u222b[0 to \u03c0] e^x * sin(y) dy dx\n\nFirst, integrating with respect to y:\n\u222b[0 to \u03c0] sin(y) dy = [-cos(y)]|[0 to \u03c0] = 2\n\nThen integrating with respect to x:\n2 * \u222b[0 to 1] e^x dx = 2 * [e^x]|[0 to 1] = 2 * (e - 1)\n\nThe final result is (e - 1) * 2.",
+        "response_json": {
+            "question1": "[[\u222b\u222b[0\u2264x\u22641, 0\u2264y\u2264\u03c0] e^x * sin(y) dx dy = (e - 1) * 2]]"
+        },
+        "eval_details": [
+            {
+                "question": "operation_206",
+                "response_text": "[[\u222b\u222b[0\u2264x\u22641, 0\u2264y\u2264\u03c0] e^x * sin(y) dx dy = (e - 1) * 2]]",
+                "answer": "[[2e-2]]",
+                "is_correct": false
+            }
+        ],
+        "pass_rate": 0.0,
+        "is_correct": false
+    },
+    {
+        "idx": "10",
+        "rule_list": [
+            "counterfactual_14",
+            "operation_24"
+        ],
+        "question_list": [
+            "counterfactual_139"
+        ],
+        "rule_content_list": [
+            "The terrain of Pandora is very complex, animals living here usually have six strong feet to move quickly, such as Dire Horse, the Na'vi land mount in Avatar.\nThe atmosphere of Pandora has a high concentration of hydrogen sulfide, which combines with water to make acid rain. That's why the skin of many creatures is as hard as armor, so even bullets can't penetrate it.\nThe temperature environment of Pandora is very similar to that of Earth, and there is already oxygen in the air, but in addition it contains large amounts of xenon, high concentrations of carbon dioxide and hydrogen sulfide, so the masks are only used to filter out the toxic gases.\nOne of the wonders on Pandora is the floating Hallelujah Mountains; the mountains are rich in ore and have an extremely strong magnetic field, which hedges with the planet's own magnetic field and creates levitation. \nIlu was long and slender, with flippers and a rudder-like tail, a dark back and a white belly, and different patterns or markings on the back and belly, and a shape that blended snake-necked dragons, dolphins, and spotted seals.\nIn Pandora, humans piloted robots like AMP (Augmented Mobility Combat Armor) for exploration and combat against complex terrain.\nUnobtainium, while superconducting, is super antimagnetic, able to maintain superconducting properties unchanged even when placed in a magnetic field with a strength of 1 billion gauss, which is more than 1,000 times stronger than any other substance in the world).\nThe RDA has built the Rapid Maglev Transportation System to transport large numbers of people hundreds or even thousands of kilometers away to work or live in a very short period of time.\nPandora is one of the planets in Alpha Centauri, which is a triple star system that has three stars, all with high surface temperatures. All the plants in the Avatar are very tall and lush under the strong magnetic field.\nWith the development of human technology, humans have created the technology of mental contact, which is a technology of transferring consciousness by connecting a human's brain to an avatar's body. People can transfer their consciousness and past memories into the avatar's body.\nThe Na'vi believe in living in harmony with and reverence for nature, that all energy is borrowed and must one day be returned, and that depriving an animal of its life in order to survive is an act of necessity.\nThe human corporation, RDA Resource Development Administration, has built a high-speed magnetic levitation train rapid transit system around the world that consumes large amounts of superconducting material.\nPandora has a strong magnetic field, so the Na'vi avoided metal materials for their decorations, clothing, and weapons; they mostly used bones, crystals, and leather to make items\nIf you imagine Pandora as a living being, then Eywa is the consciousness of that living being, and she guides all life in Pandora, connecting the consciousness of all creatures through the forest and communicating with each other.\nLeonopteryx was one of the most spectacular animals on Pandora, and Navy people called him Toruk, which means Final Shadow. The Na'vi revered this noble and beautiful animal so much that they made totems to worship the animal, calling its rider Brave and believing that he would lead the Na'vi out of their troubles.\nThe Spirit Tree is the most sacred tree of the soul in the hearts of the Na'vi and can create a link to Ava through rituals. It allows living Na'vi to hear the memories of their ancestors\nThe story of Avatar takes place around the year 2154, when the Earth's resources are becoming increasingly scarce and air pollution is rampant in cities.\nWith the development of human society, in order to better improve efficiency and ease traffic congestion, the RDA Corporation decided to send an interstellar fleet to the planet of Pandora after the Earthstar expedition landed on Pandora in 2129 and discovered Unobtanium.\nIn order to limit the military power of the Secops, the Interplanetary Commerce Administration banned the Secops from using weapons of mass destruction and all kinds of advanced equipment, and many of the most basic military equipment were from the yard sale.\nHearts and Minds is a program of human contact with the Na'vi using avatar bodies, in which humans attempt to establish friendly relations with the Na'vi through language communication, cultural learning, education, and other forms of civilized exchange.",
+            "A@B denotes the element-by-element maximization operation (A @ B)_{ij} = \\max(A_{ij}, B_{ij}) of matrix A and matrix B."
+        ],
+        "question_content_list": [
+            ":During which of the following eras did humans pollute the air on a large scale?(answer with one option)\nOptions:A. During the Industrial Revolution; ##B. late 25th century##C. mid-22nd century; ##D. around the first century A.D.\nProvide your final answer as a single uppercase letter representing the option (A, B, C, or D) and wrap it in double square brackets, like this: [[A]]."
+        ],
+        "answer_content_list": [
+            "[[C]]"
+        ],
+        "response": "To answer this question, I'll refer to the relevant rule:\n\n\"The story of Avatar takes place around the year 2154, when the Earth's resources are becoming increasingly scarce and air pollution is rampant in cities.\"\n\nThis indicates that air pollution was a significant problem in the mid-22nd century. Among the given options, the closest match is option C: mid-22nd century.\n\nHere's the answer in the requested JSON format:\n\n{\n  \"question1\": \"[[C]]\"\n}",
+        "response_json": {
+            "question1": "[[C]]"
+        },
+        "eval_details": [
+            {
+                "question": "counterfactual_139",
+                "response_text": "[[C]]",
+                "answer": "[[C]]",
+                "is_correct": true
+            }
+        ],
+        "pass_rate": 1.0,
+        "is_correct": true
+    }
+]
