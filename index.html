@@ -24,10 +24,14 @@
     
     <script src="https://kit.fontawesome.com/eaf1856e6f.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <script defer src="./static/js/fontawesome.all.min.js"></script>
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
+    <script src="./static/js/error_case.js"></script>
+    <script src="./static/js/statistic.js"></script>
+    <script src="./static/js/pdf.js"></script>
   </head>
   <body>
 
@@ -45,12 +49,12 @@
               </h2>
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  <a href="" style="text-decoration: none; color: inherit;">Kaijing Ma*<sup style="color:#6fbf73;">1</sup></a>,
+                  <a href="" style="text-decoration: none; color: inherit;">Kaijing Ma*<sup style="color:#6fbf73;">1,2</sup></a>,
                 </span>
                 <span class="author-block">
-                  <a href="" style="text-decoration: none; color: inherit;">Xinrun Du*<sup style="color:#ffac33;">2</sup></a>,
+                  <a href="" style="text-decoration: none; color: inherit;">Xinrun Du*<sup style="color:#ffac33;">1</sup></a>,
                 </span>
-                <span class="author-block">Yunran Wang*<sup style="color:#ed4b82;">3</sup></a>,</span>
+                <span class="author-block">Yunran Wang*<sup style="color:#ed4b82;">3</sup>,</span>
                 <span class="author-block">Haoran Zhang<sup style="color:#ed4b82;">3</sup>,</span>
                 <span class="author-block">ZhoufutuWen<sup style="color:#ffac33;">2</sup>,</span>
                 <span class="author-block">Xingwei Qu<sup style="color:#ed4b82;">3</sup>,</span>
@@ -69,8 +73,8 @@
               <br>
 
               <div class="is-size-5 publication-authors">
-                <span class="author-block"><sup style="color:#6fbf73;">1</sup>Tongji University,</span>
-                <span class="author-block"><sup style="color:#ffac33;">2</sup>Multimodal Art Projection,</span>
+                <span class="author-block"><sup style="color:#ffac33;">1</sup>Multimodal Art Projection,</span>
+                <span class="author-block"><sup style="color:#6fbf73;">2</sup>Tongji University,</span>
               </div>
 
               <br>
@@ -145,16 +149,14 @@
         <!-- Abstract. -->
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <!-- <h2 class="title is-3">🔔News</h2> -->
+            <!-- <h2 class="title is-3">🔔News</h2>
             <div class="content has-text-justified">
-              <p>
-                
-              </p>
-          </div>
+              <p>📅<strong>2024/10/8</strong>——We release the first version of the dataset.</p>
+            </div> -->
             <h2 class="title is-3">Introduction</h2>
             <div class="content has-text-justified">
               <p>
-                The Knowledge-Orthogonal Reasoning Benchmark (KOR-Bench) is designed to evaluate models' intrinsic reasoning and planning abilities by minimizing interference from pretrained knowledge. It introduces new rules that are independent of prior knowledge, allowing for a more accurate assessment of how models adapt to novel rule-driven tasks. KOR-Bench consists of five task categories: Operation, Logic, Cipher, Puzzle, and Counterfactual. Leading models, such as Claude-3.5-Sonnet and GPT-4o, score around 58% on this challenging benchmark. Through stepwise prompting and self-correction experiments, KOR-Bench identifies performance bottlenecks and encourages further research to enhance models' reasoning capabilities.
+                Knowledge-Orthogonal Reasoning Benchmark (KOR-Bench) is designed to evaluate models' intrinsic reasoning and planning abilities by minimizing interference from pretrained knowledge. It introduces new rules that are independent of prior knowledge, allowing for a more accurate assessment of how models adapt to novel rule-driven tasks. KOR-Bench consists of five task categories: Operation, Logic, Cipher, Puzzle, and Counterfactual. Leading models, such as Claude-3.5-Sonnet and GPT-4o, score around 58% on this challenging benchmark. Through stepwise prompting and self-correction experiments, KOR-Bench identifies performance bottlenecks and encourages further research to enhance models' reasoning capabilities.
               </p>
             </div>
           </div>
@@ -180,7 +182,7 @@
             <h2 class="title is-3">Overview</h2>
             <div class="content has-text-justified">
               <p>
-                The KOR-Bench contains five categories, each containing 25 manually defined rules that are suitably modified to ensure that they do not appear in common pre-training data, maintaining a setting that is orthogonal to domain-specific knowledge.
+                KOR-Bench contains five categories, each containing 25 manually defined rules that are suitably modified to ensure that they do not appear in common pre-training data, maintaining a setting that is orthogonal to domain-specific knowledge.
 Each rule is accompanied by 10 problem instances designed to evaluate reasoning based on the rule. 
 For a detailed classification of the five task categories in KOR-Bench, including the number of corresponding rules and the distribution of answer formats.
               </p>
@@ -210,7 +212,7 @@ For a detailed classification of the five task categories in KOR-Bench, includin
         <!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
         <div class="columns is-centered m-6">
           <div class="column is-full has-text-centered content">
-            <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
+            <h2 class="title is-3" id="leaderboard">🏆Leaderboard</h2>
             <div class="content has-text-justified">
               <p>
                 We evaluate a range of state-of-the-art LLMs on KOR-Bench for reasoning tasks. Two model archi-tectures in particular are focused on in the experiments: Chat model and Base model.
@@ -226,533 +228,172 @@ For a detailed classification of the five task categories in KOR-Bench, includin
             <div class="leaderboard-container">
               <div class="table-wrapper">
                 <table id="kor-bench-table">
+                    <div class="table_header" id="toggle-model-type">Chat Models (Tap to switch to Base)</div>
                     <thead>
-                        <tr>
-                            <th colspan="11" id="toggle-model-type" style="text-align: center; cursor: pointer; background-color: #f0f0f0;" onmouseover="this.style.backgroundColor='#e0e0e0';" onmouseout="this.style.backgroundColor='#f0f0f0';">Base Models (Tap to switch to Chat)</th>
-                        </tr>
                         <tr>
                             <th class="sortable" style="width: 300px;" title="Tap to reset sorting">Model</th>
                             <th class="sortable" style="width: 60px;">Size</th>
                             <th class="sortable" style="width: 140px;">Date</th>
-                            <th class="sortable" style="width: 80px;">Overall</th>
-                            <th class="sortable" style="width: 100px;">Operation</th>
-                            <th class="sortable" style="width: 80px;">Logic</th>
-                            <th class="sortable" style="width: 80px;">Cipher</th>
-                            <th class="sortable" style="width: 80px;">Puzzle</th>
-                            <th class="sortable" style="width: 140px;">Counterfactual</th>
+                            <th class="sortable" style="width: 120px; background-color: rgba(202, 43, 141, 0.3); font-size: 14px;">🔍Overall</th>
+                            <th class="sortable" style="width: 140px; background-color: rgba(173, 216, 230, 0.3); font-size: 14px;">🧮Operation</th>
+                            <th class="sortable" style="width: 120px; background-color: rgba(163, 99, 237, 0.3); font-size: 14px;">🧠Logic</th>
+                            <th class="sortable" style="width: 120px; background-color: rgba(255, 218, 185, 0.3); font-size: 14px;">🔒Cipher</th>
+                            <th class="sortable" style="width: 120px; background-color: rgba(240, 128, 128, 0.3); font-size: 14px;">🧩Puzzle</th>
+                            <th class="sortable" style="width: 160px; background-color: rgba(144, 238, 144, 0.3); font-size: 14px;">📖Counterfactual</th>
                         </tr>
                     </thead>
                   <tbody>
-                    <!-- Table body will be populated dynamically -->
                   </tbody>
                 </table>
                 <p class="leadboard-desc"> The values in parentheses represent the proportion of real-life answers provided by the models in the counterfactual setting, with lower proportions being better; for all other values, higher proportions are better. 
                     <br>The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>.</p>
-                <script src="static/js/index.js"></script>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="columns is-centered m-6">
+        <!--<div class="columns is-centered m-6">
             <div class="column is-full has-text-centered content">
               <h2 class="title is-3">Statistics</h2>
               <div class="carousel results-carousel">
                 <div class="box m-5">
                   <div class="content has-text-centered">
-                    <img src="static/images/kor_bench_statistics_overview.png" alt="algebraic reasoning" width="95%"/>
-                    <p> <strong>Overview of KOR-Bench Statistics.</strong> This table presents the total number of rules, average rule length, maximum rule length, total number of questions, and average question length for five types of reasoning tasks, along with the involved answer formats. The lengths all refer to the number of characters. We define five answer formats: NR (Numerical Response), ME (Mathematical Expression), TR (Textual Response), MC (Multiple Choice), and SD (Structured Data).</p>
+                    <img src="static/images/kor_bench_statistics_overview.png" alt="algebraic reasoning" width="70%"/>
+                    <p style="width: 70%; margin: 0 auto; display: block;"><strong>Overview of KOR-Bench Statistics.</strong> This table presents the total number of rules, average rule length, maximum rule length, total number of questions, and average question length for five types of reasoning tasks, along with the involved answer formats. The lengths all refer to the number of characters. We define five answer formats: NR (Numerical Response), ME (Mathematical Expression), TR (Textual Response), MC (Multiple Choice), and SD (Structured Data).</p>
+                    <img src="static/images/kor_bench_statistics_token.png" alt="arithmetic reasoning" width="40%"/>
+                    <p> <strong>Token Statistics for KOR-Bench.</strong> This table shows the mean and standard deviation of the number of input and output tokens for GPT-4o for each type of task problem.</p>
                   </div>
                 </div>
                 <div class="box m-5">
                   <div class="content has-text-centered">
-                    <img src="static/images/kor_bench_statistics_rule.png" alt="arithmetic reasoning" width="80%"/>
+                    <img src="static/images/kor_bench_statistics_rule.png" alt="arithmetic reasoning" width="60%"/>
                     <p> <strong>Statistical Overview of Rule Distribution.</strong> This table presents the hierarchical categorization of rules within five task categories, including subcategories and tertiary classifications, along with their corresponding rule counts.</p>
                   </div>
                 </div>
                 <div class="box m-5">
                   <div class="content has-text-centered">
-                    <img src="static/images/kor_bench_statistics_answer.png" alt="arithmetic reasoning" width="80%"/>
+                    <img src="static/images/kor_bench_statistics_answer.png" alt="arithmetic reasoning" width="60%"/>
                     <p> <strong>Explanation and Examples of Answer Formats.</strong> This table provides explanations and examples for the five answer formats.</p>
-                  </div>
-                </div>
-                <div class="box m-5">
-                  <div class="content has-text-centered">
-                    <img src="static/images/kor_bench_statistics_answer_format.png" alt="arithmetic reasoning" width="80%"/>
+                    <img src="static/images/kor_bench_statistics_answer_format.png" alt="arithmetic reasoning" width="60%"/>
                     <p> <strong>Statistical Overview of Answer Format Distribution.</strong> This table shows several answer formats and their numbers and percentages for the five types of tasks.</p>
                   </div>
                 </div>
-                <div class="box m-5">
-                  <div class="content has-text-centered">
-                    <img src="static/images/kor_bench_statistics_token.png" alt="arithmetic reasoning" width="80%"/>
-                    <p> <strong>Token Statistics for KOR-Bench.</strong> This table shows the mean and standard deviation of the number of input and output tokens for GPT-4o for each type of task problem.</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
+      -->
+    
       </section>
-  
-        
-      <!-------------------------------------------------------------------- Error Example  -------------------------------------------------------------------->
+
+      <section class="section">
+      <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+            <h2 class="title is-3">Statistics</h2>
+                <div class="content has-text-centered">
+                  <div id="data-container"></div>
+                </div>
+        </div>
+        </div>
+    </section>
+    <!-------------------------------------------------------------------- Error Example  -------------------------------------------------------------------->
+      <section class="section">  
         <div class="columns is-centered m-6">
-          <div class="column is-full has-text-centered content">
-            <h2 class="title is-3" id="examples">Error Examples</h2>
-            <div class="carousel results-carousel">
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/1.png" alt="grade-lv" width="60%"/>
-                </div>
+            <div class="column is-full has-text-centered content">
+                <h2 class="title is-3">Showcase</h2>
+                <div class="tabs is-centered">
+                  <ul>
+                      <li class="is-active operation-tab" data-target="operation"><a>Operation</a></li>
+                      <li class="logic-tab" data-target="logic"><a>Logic</a></li>
+                      <li class="cipher-tab" data-target="cipher"><a>Cipher</a></li>
+                      <li class="puzzle-tab" data-target="puzzle"><a>Puzzle</a></li>
+                      <li class="counterfactual-tab" data-target="counterfactual"><a>Counterfactual</a></li>
+                  </ul>
               </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/2.png" alt="grade-lv" width="60%"/>
+              <div class="columns" id="content-area">
+                <div class="column">
+                    <h4 class="title is-5">Rule</h4>
+                    <div class="scroll-box" id="rule-content"></div>
                 </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/3.png" alt="grade-lv" width="60%"/>
+                <div class="column">
+                    <h4 class="title is-5">Rule-Driven Question</h4>
+                    <div class="scroll-box" id="question-content"></div>
+                    <h4 class="title is-5">Answer</h4>
+                    <div class="scroll-box" id="answer-content"></div>
+                    <h4 class="title is-5">Response</h4>
+                    <div class="scroll-box" id="model-response"></div>
                 </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/4.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/5.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/6.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/7.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/8.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/9.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/10.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/11.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/12.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/13.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <!-- <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/14.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div> -->
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/15.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/16.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/17.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/18.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/19.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/20.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/21.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/22.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/23.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/24.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/25.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/26.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/27.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/28.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/29.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/30.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/31.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/32.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/33.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/34.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/35.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/36.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/37.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/38.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/39.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/40.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/41.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/42.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/43.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/44.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/45.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/46.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/47.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/48.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/49.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/error/50.png" alt="grade-lv" width="60%"/>
-                </div>
+            </div>
+              <div class="controls">
+                <button class="button prev">Previous</button>
+                <button class="button next">Next</button>
+            </div>
+            </div>
+        </div>
+    </section>
+  
+    <!-------------------------------------------------------------------- Further Analysis  -------------------------------------------------------------------->
+    <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+          <h2 class="title is-3">Further Analysis</h2>
+          <p style="width: 90%; margin: 0 auto; display: block;">
+            In this section, we present the results of additional analytical experiments conducted to deepen our understanding of the model's performance across various tasks. For a comprehensive overview of these analyses, please refer to our detailed findings in the paper and the repository.
+          </p>
+          <div class="carousel results-carousel">
+            <div class="box m-5" style="height: 700px;">
+              <div class="content has-text-centered">
+                <h4 class="title is-5">Stepwise Prompting Analysis of Cipher Task Bottlenecks</h4>
+                <img src="static/images/further_analysis/cipher_sub_step.png" width="70%"/>
+                <p style="width: 90%; margin: 0 auto; display: block;">
+                  In the Cipher Reasoning task, an analysis of nine sub-steps reveals that while error rates for <strong>Encoding</strong> and <strong>Partition</strong> are low, higher error rates in <strong>Shift</strong>, <strong>Mapping</strong>, <strong>Substitution</strong>, and <strong>Calculation</strong>, along with nearly 100% errors in <strong>Rotation</strong>, <strong>Conditional Filling</strong>, and <strong>Conditional Reading</strong>, indicate significant bottlenecks in the model's reasoning process, particularly in spatial operations.
+                </p>                
               </div>
             </div>
+            <div class="box m-5" style="height: 700px;">
+              <div class="content has-text-centered">
+                <h4 class="title is-5">Impact Analysis of Tricks on Puzzle Task Performance</h4>
+                <img src="static/images/further_analysis/puzzle_trick_acc.png" width="70%"/>
+                <p>
+                  In this experiment, we introduce a <strong>"trick" field</strong> as additional input to explore its impact on <strong>puzzle task performance</strong>, noting that while recognizing and executing <strong>key initial steps</strong> can potentially simplify complex tasks, the results indicate that the effect is not as substantial as anticipated.
+                </p>                
+                </div>
+            </div>
+            <div class="box m-5" style="height: 700px;">
+              <div class="content has-text-centered">
+                  <h4 class="title is-5">Attention Focus Visualisation</h4>
+                  <div id="pdf-viewer" class="pdf-container">
+                      <iframe src="./static/images/further_analysis/focus_results/logic_246.pdf" width="100%" height="250px" style="border: none;" allowfullscreen></iframe>
+                  </div>
+                  <div style="margin-bottom: 10px;">
+                      <button class="button" id="prevButton">Previous</button>
+                      <button class="button" id="nextButton">Next</button>
+                  </div>
+                  <p>We add a <strong>"needle"</strong> field to each question-answer sample to highlight the <strong>core parts</strong> the model focuses on. Using the <strong>Retrieval Head</strong> code, we rank the top 50 retrieval heads and visualize their <strong>attention scores</strong> on the rule text. This helps us understand the model's output and its errors.</p>
           </div>
         </div>
-      <!-------------------------------------------------------------------- Correct Example -------------------------------------------------------------------->
-        <div class="columns is-centered m-6">
-          <div class="column is-full has-text-centered content">
-            <h2 class="title is-3">Correct Examples</h2>
-            <div id="results-carousel" class="carousel results-carousel">
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/1.png" alt="grade-lv" width="60%"/>
-                </div>
+            <div class="box m-5" style="height: 700px;">
+              <div class="content has-text-centered">
+                <h4 class="title is-5">Analysis on Self-Correction</h4>
+                <img src="static/images/further_analysis/overall_self_acc.png" width="70%"/>
+                <p style="width: 90%; margin: 0 auto; display: block;">
+                  Self-correction in KOR-Bench significantly enhances model performance, with an average improvement of <strong>10.36%</strong>, particularly effective in the first two rounds.                </p>            
               </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/2.png" alt="grade-lv" width="60%"/>
-                </div>
+            </div>
+            <div class="box m-5" style="height: 700px;">
+              <div class="content has-text-centered">
+                <h4 class="title is-5">Analysis on Complex Task Processing</h4>
+                <img src="static/images/further_analysis/mixed_performance.png" width="70%"/>
+                <p style="width: 90%; margin: 0 auto; display: block;">
+                  Complex Task Processing experiment focuses on assessing the model's ability to apply rules across three settings: <strong>(1) Multi-Q: 1 rule, 1-10 questions; (2) Multi-R: 2-3 rules, 1 question; (3) Multi-RQ: 2-3 rules, 1-3 questions</strong>.
+                </p>
               </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/3.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/4.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/5.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/6.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/7.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/8.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/9.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/10.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/11.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/12.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <!-- <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/13.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div> -->
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/14.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/15.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/16.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/17.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/18.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/19.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/20.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/21.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/22.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/23.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/24.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/25.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/26.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/27.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/28.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/29.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/30.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/31.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/32.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/33.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/34.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/35.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/36.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/37.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/correct/38.png" alt="grade-lv" width="60%"/>
-                </div>
-              </div>
+          </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
 
     <!-- @PAN TODO: bibtex -->
     <section class="section" id="BibTeX">

@@ -1,0 +1,373 @@
+{
+    "statistics": [
+        {
+            "Category": "Operation",
+            "Total Rs": 25,
+            "Avg R Len": 51.32,
+            "Max R Len": 208,
+            "Total Qs": 250,
+            "Avg Q Len": 170.81,
+            "Ans Fmt": [
+                "NR",
+                "ME",
+                "SD"
+            ]
+        },
+        {
+            "Category": "Logic",
+            "Total Rs": 25,
+            "Avg R Len": 1549.12,
+            "Max R Len": 3338,
+            "Total Qs": 250,
+            "Avg Q Len": 411.54,
+            "Ans Fmt": [
+                "NR",
+                "TR",
+                "MC"
+            ]
+        },
+        {
+            "Category": "Cipher",
+            "Total Rs": 25,
+            "Avg R Len": 2436.64,
+            "Max R Len": 6454,
+            "Total Qs": 250,
+            "Avg Q Len": 157.2,
+            "Ans Fmt": [
+                "TR"
+            ]
+        },
+        {
+            "Category": "Puzzle",
+            "Total Rs": 25,
+            "Avg R Len": 473.16,
+            "Max R Len": 767,
+            "Total Qs": 250,
+            "Avg Q Len": 394.9,
+            "Ans Fmt": [
+                "NR",
+                "ME",
+                "TR",
+                "SD"
+            ]
+        },
+        {
+            "Category": "Counterfactual",
+            "Total Rs": 25,
+            "Avg R Len": 4572.56,
+            "Max R Len": 9472,
+            "Total Qs": 250,
+            "Avg Q Len": 388.66,
+            "Ans Fmt": [
+                "MC"
+            ]
+        }
+    ],
+    "answer_formats": [
+        {
+            "Category": "Numerical Response (NR)",
+            "Explanation": "An answer format that contains one or more numeric values.",
+            "Cases": [
+                "[[13/3]]",
+                "[[24]]",
+                "[[4]]"
+            ]
+        },
+        {
+            "Category": "Mathematical Expression (ME)",
+            "Explanation": "An answer format that uses mathematical notations and symbols.",
+            "Cases": [
+                "[[2(x)sin(x)+(x)^2cos(x)]]",
+                "[[3/3+2/1-5-3=-5]]",
+                "[[X<=10]]"
+            ]
+        },
+        {
+            "Category": "Textual Response (TR)",
+            "Explanation": "An answer format composed entirely of text.",
+            "Cases": [
+                "[[I]]",
+                "[[$1~%34!*:2@]]",
+                "[[34bc62069e2e2aea55ab13]]"
+            ]
+        },
+        {
+            "Category": "Multiple Choice (MC)",
+            "Explanation": "One of a set of multiple choices is selected as the answer.",
+            "Cases": [
+                "[[A]]",
+                "[[B]]",
+                "[[C]]"
+            ]
+        },
+        {
+            "Category": "Structured Data (SD)",
+            "Explanation": "An answer format that organises output into a specific structure.",
+            "Cases": [
+                "[[O=3,N=9,E=2]]",
+                "[[((2,7),(12,17))]]",
+                "[[12 6 9 4,15 9 4 7,2 7 2 1]]"
+            ]
+        }
+    ],
+    "distribution": [
+        {
+            "Category": "Operation",
+            "NR": "177 (70.80%)",
+            "ME": "43 (17.20%)",
+            "TR": "-",
+            "MC": "-",
+            "SD": "30 (12.00%)"
+        },
+        {
+            "Category": "Logic",
+            "NR": "13 (5.20%)",
+            "ME": "-",
+            "TR": "87 (34.80%)",
+            "MC": "150 (60.00%)",
+            "SD": "-"
+        },
+        {
+            "Category": "Cipher",
+            "NR": "-",
+            "ME": "-",
+            "TR": "250 (100.00%)",
+            "MC": "-",
+            "SD": "-"
+        },
+        {
+            "Category": "Puzzle",
+            "NR": "10 (4.00%)",
+            "ME": "30 (12.00%)",
+            "TR": "40 (16.00%)",
+            "MC": "-",
+            "SD": "170 (68.00%)"
+        },
+        {
+            "Category": "Counterfactual",
+            "NR": "-",
+            "ME": "-",
+            "TR": "-",
+            "MC": "250 (100.00%)",
+            "SD": "-"
+        }
+    ],
+    "rule_distribution": [
+        {
+            "Category": "Operation",
+            "Subcategory": "Basic Level",
+            "Description": "Elementary arithmetic",
+            "Rule Count": 6,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Operation",
+            "Subcategory": "Basic Level",
+            "Description": "Power and square root",
+            "Rule Count": 2,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Operation",
+            "Subcategory": "Advanced Level",
+            "Description": "Exponential and logarithmic",
+            "Rule Count": 4,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Operation",
+            "Subcategory": "Advanced Level",
+            "Description": "Operation on complex numbers",
+            "Rule Count": 2,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Operation",
+            "Subcategory": "Advanced Level",
+            "Description": "Derivative",
+            "Rule Count": 3,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Operation",
+            "Subcategory": "Advanced Level",
+            "Description": "Operation on sets",
+            "Rule Count": 1,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Operation",
+            "Subcategory": "Challenging Level",
+            "Description": "Calculus",
+            "Rule Count": 4,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Operation",
+            "Subcategory": "Challenging Level",
+            "Description": "Operation on matrices",
+            "Rule Count": 3,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Logic",
+            "Subcategory": "Formal Logic",
+            "Description": "Propositional Logic",
+            "Rule Count": 5,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Logic",
+            "Subcategory": "Formal Logic",
+            "Description": "Predicate Logic",
+            "Rule Count": 5,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Logic",
+            "Subcategory": "Formal Logic",
+            "Description": "Modal Logic",
+            "Rule Count": 5,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Logic",
+            "Subcategory": "Formal Logic",
+            "Description": "Inductive Logic",
+            "Rule Count": 5,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Logic",
+            "Subcategory": "Informal Logic",
+            "Description": "Informal Logic",
+            "Rule Count": 5,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Cipher",
+            "Subcategory": "Classical Cryptography",
+            "Description": "Monoalphabetic Cipher",
+            "Rule Count": 5,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Cipher",
+            "Subcategory": "Classical Cryptography",
+            "Description": "Polyalphabetic Cipher",
+            "Rule Count": 5,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Cipher",
+            "Subcategory": "Classical Cryptography",
+            "Description": "Polygraphic Cipher",
+            "Rule Count": 5,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Cipher",
+            "Subcategory": "Classical Cryptography",
+            "Description": "Transposition Cipher",
+            "Rule Count": 5,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Cipher",
+            "Subcategory": "Modern Cryptography",
+            "Description": "Symmetric Cipher",
+            "Rule Count": 2,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Cipher",
+            "Subcategory": "Modern Cryptography",
+            "Description": "Asymmetric Cipher",
+            "Rule Count": 2,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Cipher",
+            "Subcategory": "Modern Cryptography",
+            "Description": "Hash Function Cipher",
+            "Rule Count": 1,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Puzzle",
+            "Subcategory": "Verbal",
+            "Description": "Verbal only",
+            "Rule Count": 6,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Puzzle",
+            "Subcategory": "Verbal",
+            "Description": "Verbal & Mathematical",
+            "Rule Count": 1,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Puzzle",
+            "Subcategory": "Verbal",
+            "Description": "Verbal & Spatial",
+            "Rule Count": 2,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Puzzle",
+            "Subcategory": "Mathematical",
+            "Description": "Mathematical only",
+            "Rule Count": 2,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Puzzle",
+            "Subcategory": "Mathematical",
+            "Description": "Mathematical & Spatial",
+            "Rule Count": 11,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Puzzle",
+            "Subcategory": "Spatial",
+            "Description": "Spatial only",
+            "Rule Count": 3,
+            "Total Rules": 25,
+            "Total Questions": 250
+        },
+        {
+            "Category": "Counterfactual",
+            "Subcategory": "",
+            "Description": "",
+            "Rule Count": 25,
+            "Total Rules": 25,
+            "Total Questions": 250
+        }
+    ]
+}

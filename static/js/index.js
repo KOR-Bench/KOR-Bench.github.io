@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 let currentModelType = 'chat model';
 
 function loadTableData() {
-  fetch('./kor_leaderboard_data.json')
+  fetch('./static/data/kor_leaderboard_data.json')
     .then(response => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -61,7 +61,7 @@ function renderTable(data) {
         <td>${formatScore(row.puzzle, scores.puzzle[index], row.type)}</td>
         <td>${formatCounterfactualScore(row.counterfactual, scores.counterfactualOutside[index], scores.counterfactualInside[index], row.type)}</td>
       `;
-      tr.style.backgroundColor = row.open ? 'rgba(144, 238, 144, 0.1)' : 'rgba(117, 209, 215, 0.1)';
+      tr.style.backgroundColor = row.open ? 'rgba(153, 238, 214, 0.05)' : 'rgba(0, 204, 255, 0.05)';
       tbody.appendChild(tr);
     }
   });
@@ -104,6 +104,12 @@ function setupEventListeners() {
   document.getElementById('toggle-model-type').addEventListener('click', function() {
     currentModelType = currentModelType === 'chat model' ? 'base model' : 'chat model';
     this.textContent = `${currentModelType === 'chat model' ? 'Chat Models (Tap to switch to Base)' : 'Base Models (Tap to switch to Chat)'}`;
+    // 根据当前模型类型修改表头背景颜色
+    const tableHeader = document.querySelector('.table_header');
+    tableHeader.style.background = currentModelType === 'chat model' 
+    ? 'linear-gradient(to left, rgba(146, 254, 157, 0.6) 0%, rgba(0, 201, 255, 0.6) 100%)'
+    : 'linear-gradient(to right, rgba(146, 254, 157, 0.6) 0%, rgba(0, 201, 255, 0.6) 100%)';
+
     loadTableData();
   });
 

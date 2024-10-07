@@ -27,12 +27,13 @@ body {
 }
 
 .open_source {
-  background-color: rgba(144, 238, 144, 0.1);
+  background-color: rgba(153, 238, 214, 0.1); 
 }
 
 .proprietary {
-  background-color: rgba(117, 209, 215, 0.1);
+  background-color: rgba(0, 204, 255, 0.1); 
 }
+
 
 .random_frequent {
   background-color: #f4f9fe;
@@ -293,6 +294,8 @@ td:hover {
 #kor-bench-table {
   table-layout: auto;
   width: 100%;
+  border-collapse: separate; 
+  border-spacing: 0; 
 }
 
 #kor-bench-table th:not(:first-child),
@@ -330,10 +333,131 @@ th.sortable {
 }
 
 th.sortable:hover {
-  background-color: #e0e0e0; /* Hover color */
+  background-color: #e0e0e0; 
 }
 
 th.sortable.asc,
 th.sortable.desc {
-  background-color: #d0d0d0; /* Active sort color */
+  background-color: #d0d0d0; 
 }
+
+.table_header {
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(-20deg, rgba(183, 33, 255, 0.5) 0%, rgba(33, 212, 253, 0.5) 100%); 
+  padding: 10px; 
+  border-top-left-radius: 20px; 
+  border-top-right-radius: 20px; 
+  margin-bottom: -5px;  
+}
+
+
+
+.table_header:hover {
+  background-color: #e0e0e0; 
+}
+
+
+.tab-content {
+  width: 100%; 
+}
+
+.scroll-box {
+  text-align: left; 
+  width: 600px; 
+  height: 400px; 
+  overflow-y: auto;  
+  overflow-x: hidden;
+  padding: 10px; 
+  border-radius: 10px; 
+  background-color: #0e5fec07; 
+  
+
+  border-width: 1px; 
+  border-style: solid; 
+  border-color: #d3d3d3;
+}
+
+
+.scroll-box::-webkit-scrollbar {
+  width: 6px; 
+}
+
+.scroll-box::-webkit-scrollbar-track {
+  background: #e1f5fe; 
+  border-radius: 2px; 
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+  background: #aed7ec; 
+  border-radius: 2px; 
+}
+
+.scroll-box::-webkit-scrollbar-thumb:hover {
+  background: #6eb2dd;
+}
+
+
+#rule-content {
+  height: 565px; 
+}
+
+#question-content {
+  height: 120px;
+  margin-bottom: 20px; 
+}
+
+#answer-content {
+  height: 50px; 
+  margin-bottom: 20px; 
+}
+
+#model-response {
+  height: 260px; 
+}
+
+.controls {
+  display: flex; 
+  justify-content: center; 
+  margin-top: 20px; 
+}
+
+
+.controls .button {
+  margin: 10px;
+}
+
+
+#data-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+#data-container th, #data-container td {
+  border: 1px solid #ddd; 
+  padding: 8px; 
+}
+
+#data-container thead {
+  background-color: #f2f2f2; 
+}
+
+#data-container tr:nth-child(even) {
+  background-color: #f9f9f9; 
+}
+
+#data-container table tr:hover {
+  background-color: #ddd; 
+}
+
+#data-container caption {
+  font-weight: bold; 
+  font-size: 1.2em; 
+  margin-top: 10px; 
+  caption-side: bottom; 
+}
+
