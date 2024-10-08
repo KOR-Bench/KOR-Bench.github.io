@@ -2,36 +2,51 @@ $(document).ready(function() {
     let currentIndex = 0; 
     let currentCategory = 'operation'; 
     let data = []; 
+    let allData = {}; 
 
 
-    loadTableData(currentCategory);
+    const categories = ['operation', 'logic', 'cipher', 'puzzle', 'counterfactual', 'multiq', 'multir', 'multirq']; 
+
+
+    loadAllTableData(categories).then(() => {
+        loadTableData(currentCategory); 
+    });
 
     $('.tabs ul li').on('click', function() {
         $('.tabs ul li').removeClass('is-active');
         $(this).addClass('is-active');
         const target = $(this).data('target');
         currentCategory = target;
-        loadTableData(currentCategory);
+        loadTableData(currentCategory); 
     });
 
     console.log(currentCategory);
 
+
+    function loadAllTableData(categories) {
+        const promises = categories.map(category => {
+            return $.getJSON(`./static/data/case_${category}.json`)
+                .done(function(response) {
+                    allData[category] = response; 
+                })
+                .fail(function(jqxhr, textStatus, error) {
+                    let err = textStatus + ", " + error;
+                    $('#content-area').html(`Error loading data for category ${category}. ${err}`);
+                });
+        });
+        return Promise.all(promises);
+    }
+
+
     function loadTableData(category) {
-        $.getJSON(`./static/data/case_${category}.json`)
-            .done(function(response) {
-                data = response; 
-                if (data.length > 0) {
-                    currentIndex = 0; 
-                    showItem(currentIndex); 
-                    setColorScheme(category);
-                } else {
-                    $('#content-area').html('<p>There are no available data for this category.</p>');
-                }
-            })
-            .fail(function(jqxhr, textStatus, error) {
-                let err = textStatus + ", " + error;
-                $('#content-area').html(`Error loading data. ${err}`);
-            });
+        data = allData[category]; 
+        if (data && data.length > 0) {
+            currentIndex = 0; 
+            showItem(currentIndex); 
+            setColorScheme(category);
+        } else {
+            $('#content-area').html('<p>There are no available data for this category.</p>');
+        }
     }
 
     function escapeHtml(html) {

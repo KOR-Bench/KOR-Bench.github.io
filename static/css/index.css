@@ -462,6 +462,7 @@ th.sortable.desc {
   display: flex; 
   justify-content: center; 
   margin-top: 20px; 
+  margin-left:-50px;
 }
 
 
@@ -469,9 +470,6 @@ th.sortable.desc {
   margin: 10px;
 }
 
-#tab_controls{
-  margin-left:-50px;
-}
 
 #data-container table {
   width: 100%;
