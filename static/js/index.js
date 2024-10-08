@@ -61,7 +61,10 @@ function renderTable(data) {
       <td>${formatScore(row.puzzle, scores.puzzle[index], row.type)}</td>
       <td>${formatCounterfactualScore(row.counterfactual, scores.counterfactualOutside[index], scores.counterfactualInside[index], row.type)}</td>
     `;
-      tr.style.backgroundColor = row.open ? 'rgba(153, 238, 214, 0.1)' : 'rgba(0, 204, 255, 0.05)';
+      tr.style.background = row.open 
+    ? 'linear-gradient(145deg, rgba(204, 255, 238, 0.5), rgba(153, 238, 214, 0.05))' 
+    : 'linear-gradient(145deg, rgba(204, 238, 255, 0.5), rgba(153, 204, 255, 0.05))'; 
+
       tbody.appendChild(tr);
     }
   });
