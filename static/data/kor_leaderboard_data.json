@@ -1,5 +1,33 @@
 [
     {
+        "model": "O1-Preview(2024-09-12)",
+        "link": "https://platform.openai.com/docs/models/o1",
+        "date": "2024-09-23",
+        "size": "-",
+        "open": false,
+        "overall": "72.88",
+        "operation": "88.80",
+        "logic": "63.20",
+        "cipher": "82.80",
+        "puzzle": "36.80",
+        "counterfactual": "92.80(5.20)",
+        "type": "chat model"
+    },
+    {
+        "model": "O1-Mini(2024-09-12)",
+        "link": "https://platform.openai.com/docs/models/o1",
+        "date": "2024-09-23",
+        "size": "-",
+        "open": false,
+        "overall": "70.16",
+        "operation": "82.80",
+        "logic": "61.20",
+        "cipher": "79.60",
+        "puzzle": "35.60",
+        "counterfactual": "91.60(5.60)",
+        "type": "chat model"
+    },
+    {
         "model": "Claude-3.5-Sonnet(2024-06-20)",
         "link": "https://www.anthropic.com/news/claude-3-5-sonnet",
         "date": "2024-09-23",
